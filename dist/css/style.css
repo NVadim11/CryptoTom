@@ -1,5 +1,17 @@
 @charset "UTF-8";
 
+.wrapper {
+  background-color: #000000;
+  min-height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 @font-face {
   font-family: Grandstander;
   font-display: swap;
@@ -331,3 +343,7 @@ h6 {
 	}
 }
 */
+
+.mainContent__gradient svg {
+  width: 100%;
+}
