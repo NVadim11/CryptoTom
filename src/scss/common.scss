@@ -1,1 +1,9 @@
 // Заголовки, загальні БЕМ блоки та інше...
+.soundToggler {
+    &__itemOn {
+        display: flex;
+    }
+    &__itemOff {
+        display: none;
+    }
+}

@@ -22,6 +22,8 @@
             }));
         }
     }), 0);
+    document.querySelector(".soundToggler__itemOn");
+    document.querySelector(".soundToggler__itemOff");
     window["FLS"] = true;
     isWebp();
 })();

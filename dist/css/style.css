@@ -293,14 +293,23 @@ h6 {
      object-fit: contain;
 }
 
+.soundToggler__itemOn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.soundToggler__itemOff {
+  display: none;
+}
+
 .header {
   background: transparent;
   width: 100%;
-  padding: 1.25rem 0;
+  padding: 1.5rem 0;
 }
 
 .header__container {
-  max-width: 90rem;
   padding: 0 8.125rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -311,11 +320,14 @@ h6 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin: 0 auto;
+  max-width: 120rem;
 }
 
 .header__logo {
   cursor: pointer;
   z-index: 10;
+  scale: 1.2;
 }
 
 .header__leaderboard {
@@ -326,6 +338,7 @@ h6 {
   z-index: 10;
   -webkit-transition: 0.25s;
   transition: 0.25s;
+  scale: 1.2;
 }
 
 .header__leaderboard:hover button {
@@ -344,6 +357,7 @@ h6 {
   cursor: pointer;
   -webkit-transition: 0.25s;
   transition: 0.25s;
+  scale: 1.2;
 }
 
 .header__walletBtn:hover {
@@ -351,6 +365,10 @@ h6 {
   transition: 0.25s;
   color: #000000;
   background-color: #ffffff;
+}
+
+.header__mobileBtns {
+  display: none;
 }
 
 /*
@@ -410,7 +428,6 @@ h6 {
 }
 
 .mainContent__container {
-  max-width: 90rem;
   padding: 0 8.125rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -421,6 +438,9 @@ h6 {
           flex-direction: column;
   width: 100%;
   margin: 5.25rem 0 0 0;
+  max-width: 120rem;
+  padding: 0 8.125rem;
+  margin: 0 auto;
 }
 
 .mainContent__gradient {
@@ -487,6 +507,53 @@ h6 {
   fill: #000000;
   -webkit-transition: 0.25s;
   transition: 0.25s;
+}
+
+@media (max-width: 119.99875em) {
+  .header {
+    padding: 1.25rem 0;
+  }
+
+  .header__container {
+    max-width: 90rem;
+  }
+
+  .header__logo {
+    scale: 1;
+  }
+
+  .header__leaderboard {
+    scale: 1;
+  }
+
+  .header__walletBtn {
+    scale: 1;
+  }
+
+  .mainContent__container {
+    max-width: 90rem;
+  }
+}
+
+@media (max-width: 87.49875em) {
+  .header__logo img {
+    height: 1.375rem;
+    width: 8.5rem;
+  }
+
+  .header__leaderboard {
+    display: none;
+  }
+
+  .header__walletBtn {
+    display: none;
+  }
+
+  .header__mobileBtns {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 .webp .wrapper{ background-image: url(img/bg.webp); }

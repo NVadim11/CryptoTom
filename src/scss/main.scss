@@ -1,12 +1,17 @@
 .mainContent {
     position: relative;
     &__container {
-        max-width: 90rem;
 		padding: 0 8.125rem;
 		display: flex;
         flex-direction: column;
         width: 100%;
         margin: 5.25rem 0 0 0;
+        max-width: 120rem;
+        padding: 0 8.125rem;
+        margin: 0 auto;
+		@media (max-width: $fp) {
+			max-width: 90rem;
+		}
     }
     &__gradient {
         display: flex;
