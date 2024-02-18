@@ -4,8 +4,8 @@
 // Сніппет (HTML): pl
 
 // Підключення функціоналу "Чортоги Фрілансера"
-import { isMobile, bodyLockStatus, bodyLock, bodyUnlock, bodyLockToggle, FLS } from "../files/functions.js";
-import { flsModules } from "../files/modules.js";
+import { FLS, bodyLock, bodyLockStatus, bodyUnlock } from "../files/functions.js"
+import { flsModules } from "../files/modules.js"
 
 // Клас Popup
 class Popup {
@@ -348,12 +348,12 @@ class Popup {
 		}
 	}
 	_focusTrap() {
-		const focusable = this.previousOpen.element.querySelectorAll(this._focusEl);
-		if (!this.isOpen && this.lastFocusEl) {
-			this.lastFocusEl.focus();
-		} else {
-			focusable[0].focus();
-		}
+		// const focusable = this.previousOpen.element.querySelectorAll(this._focusEl);
+		// if (!this.isOpen && this.lastFocusEl) {
+		// 	this.lastFocusEl.focus();
+		// } else {
+		// 	focusable[0].focus();
+		// }
 	}
 	// Функція виведення в консоль
 	popupLogging(message) {
