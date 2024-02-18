@@ -4,6 +4,11 @@
 	min-height: 100%;
 	display: flex;
 	flex-direction: column;
+	position: relative;
+	background-image: url("img/bg.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover
 }
 // Підключення міксинів ===========================================================================================================================================================================================================================================================================
 @import "base/mixins";
@@ -27,7 +32,7 @@ $fontFamily: "Grandstander";
 $fontSize: toRem(14); // де 14(px) - розмір шрифту за замовчуванням з макету
 
 // Основні кольори
-$mainColor: #000; // Колір шрифту за замовчуванням
+$mainColor: #ffffff; // Колір шрифту за замовчуванням
 
 // Палітра кольорів
 // @import "base/colors-palette";
@@ -101,47 +106,47 @@ body {
 Наприклад header__container, main__container і т.п.
 Сніппет (HTML): cnt
 */
-@if ($responsiveType==1) {
-	// Чуйна
-	[class*="__container"] {
-		@if ($maxWidthContainer>0) {
-			max-width: toRem($containerWidth);
-			margin: 0 auto;
-		}
-		@if ($containerPadding>0) {
-			@if ($maxWidthContainer>0) {
-				padding: 0 toRem(math.div($containerPadding, 2));
-			} @else {
-				@include adaptiveValue("padding-left", math.div($containerPadding, 2), 15);
-				@include adaptiveValue("padding-right", math.div($containerPadding, 2), 15);
-			}
-		}
-	}
-} @else {
-	// Брейк-поїнтами
-	[class*="__container"] {
-		margin: 0 auto;
-		@if ($maxWidthContainer>0) {
-			max-width: toRem($containerWidth);
-		} @else {
-			@if ($containerPadding>0) {
-				padding: 0 toRem(math.div($containerPadding, 2));
-			}
-		}
-		@media (max-width: $pc) {
-			max-width: toRem(970);
-		}
-		@media (max-width: $tablet) {
-			max-width: toRem(750);
-		}
-		@media (max-width: $mobile) {
-			max-width: none;
-			@if ($containerPadding>0 and $maxWidthContainer>0) {
-				padding: 0 toRem(math.div($containerPadding, 2));
-			}
-		}
-	}
-}
+// @if ($responsiveType==1) {
+// 	// Чуйна
+// 	[class*="__container"] {
+// 		@if ($maxWidthContainer>0) {
+// 			max-width: toRem($containerWidth);
+// 			margin: 0 auto;
+// 		}
+// 		@if ($containerPadding>0) {
+// 			@if ($maxWidthContainer>0) {
+// 				padding: 0 toRem(math.div($containerPadding, 2));
+// 			} @else {
+// 				@include adaptiveValue("padding-left", math.div($containerPadding, 2), 15);
+// 				@include adaptiveValue("padding-right", math.div($containerPadding, 2), 15);
+// 			}
+// 		}
+// 	}
+// } @else {
+// 	// Брейк-поїнтами
+// 	[class*="__container"] {
+// 		margin: 0 auto;
+// 		@if ($maxWidthContainer>0) {
+// 			max-width: toRem($containerWidth);
+// 		} @else {
+// 			@if ($containerPadding>0) {
+// 				padding: 0 toRem(math.div($containerPadding, 2));
+// 			}
+// 		}
+// 		@media (max-width: $pc) {
+// 			max-width: toRem(970);
+// 		}
+// 		@media (max-width: $tablet) {
+// 			max-width: toRem(750);
+// 		}
+// 		@media (max-width: $mobile) {
+// 			max-width: none;
+// 			@if ($containerPadding>0 and $maxWidthContainer>0) {
+// 				padding: 0 toRem(math.div($containerPadding, 2));
+// 			}
+// 		}
+// 	}
+// }
 
 // Підключення базових стилів, шаблонів (заготівель) та допоміжних класів
 // Для підключення/вимкнення конкретних стилів дивись base.scss

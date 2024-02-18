@@ -1,5 +1,49 @@
 //====================================================================================================
-
+.header {
+	background: transparent;
+	width: 100%;
+	padding: 1.25rem 0;
+	&__container {
+		max-width: 90rem;
+		padding: 0 8.125rem;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	&__logo {
+		cursor: pointer;
+		z-index: 10;
+	}
+	&__leaderboard {
+		font-weight: 500;
+		font-size: 1.125rem;
+		line-height: 130%;
+		cursor: pointer;
+		z-index: 10;
+		transition: .25s;
+	}
+	&__leaderboard:hover {
+		button {
+			transition: .25s;
+			text-decoration: underline;
+		}
+	}
+	&__walletBtn {
+		font-weight: 600;
+		font-size: 1rem;
+		border: 2px solid #fff;
+		border-radius: 60px;
+		padding: 0.9375rem 0.9375rem 0.8125rem 0.9375rem;
+		z-index: 10;
+		cursor: pointer;
+		transition: .25s;
+	}
+	&__walletBtn:hover {
+		transition: .25s;
+		color: #000000;
+		background-color: #ffffff;
+	}
+}
 //====================================================================================================
 
 //Burger

@@ -1,5 +1,8 @@
 @charset "UTF-8";
 
+.no-webp .wrapper{
+  background-image: url("img/bg.png"); }
+
 .wrapper {
   background-color: #000000;
   min-height: 100%;
@@ -10,6 +13,10 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 @font-face {
@@ -33,7 +40,7 @@
   font-display: swap;
   src: url("../fonts/Grandstander-BoldItalic.woff2") format("woff2"), url("../fonts/Grandstander-BoldItalic.woff") format("woff");
   font-weight: 700;
-  font-style: normal;
+  font-style: italic;
 }
 
 @font-face {
@@ -41,7 +48,7 @@
   font-display: swap;
   src: url("../fonts/Grandstander-BlackItalic.woff2") format("woff2"), url("../fonts/Grandstander-BlackItalic.woff") format("woff");
   font-weight: 900;
-  font-style: normal;
+  font-style: italic;
 }
 
 @font-face {
@@ -57,7 +64,7 @@
   font-display: swap;
   src: url("../fonts/Grandstander-ExtraBoldItalic.woff2") format("woff2"), url("../fonts/Grandstander-ExtraBoldItalic.woff") format("woff");
   font-weight: 800;
-  font-style: normal;
+  font-style: italic;
 }
 
 @font-face {
@@ -65,7 +72,7 @@
   font-display: swap;
   src: url("../fonts/Grandstander-ExtraLightItalic.woff2") format("woff2"), url("../fonts/Grandstander-ExtraLightItalic.woff") format("woff");
   font-weight: 200;
-  font-style: normal;
+  font-style: italic;
 }
 
 @font-face {
@@ -97,7 +104,7 @@
   font-display: swap;
   src: url("../fonts/Grandstander-LightItalic.woff2") format("woff2"), url("../fonts/Grandstander-LightItalic.woff") format("woff");
   font-weight: 300;
-  font-style: normal;
+  font-style: italic;
 }
 
 @font-face {
@@ -113,7 +120,7 @@
   font-display: swap;
   src: url("../fonts/Grandstander-MediumItalic.woff2") format("woff2"), url("../fonts/Grandstander-MediumItalic.woff") format("woff");
   font-weight: 500;
-  font-style: normal;
+  font-style: italic;
 }
 
 @font-face {
@@ -137,7 +144,7 @@
   font-display: swap;
   src: url("../fonts/Grandstander-SemiBoldItalic.woff2") format("woff2"), url("../fonts/Grandstander-SemiBoldItalic.woff") format("woff");
   font-weight: 600;
-  font-style: normal;
+  font-style: italic;
 }
 
 @font-face {
@@ -145,7 +152,7 @@
   font-display: swap;
   src: url("../fonts/Grandstander-ThinItalic.woff2") format("woff2"), url("../fonts/Grandstander-ThinItalic.woff") format("woff");
   font-weight: 100;
-  font-style: normal;
+  font-style: italics;
 }
 
 @font-face {
@@ -176,7 +183,7 @@ body {
 }
 
 body {
-  color: #000;
+  color: #ffffff;
   line-height: 1;
   font-family: "Grandstander";
   font-size: 0.875rem;
@@ -267,12 +274,6 @@ h6 {
 Сніппет (HTML): cnt
 */
 
-[class*=__container] {
-  max-width: 75rem;
-  margin: 0 auto;
-  padding: 0 0.9375rem;
-}
-
 [class*=-ibg] {
   position: relative;
 }
@@ -290,6 +291,66 @@ h6 {
 [class*=-ibg--contain] img {
   -o-object-fit: contain;
      object-fit: contain;
+}
+
+.header {
+  background: transparent;
+  width: 100%;
+  padding: 1.25rem 0;
+}
+
+.header__container {
+  max-width: 90rem;
+  padding: 0 8.125rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__logo {
+  cursor: pointer;
+  z-index: 10;
+}
+
+.header__leaderboard {
+  font-weight: 500;
+  font-size: 1.125rem;
+  line-height: 130%;
+  cursor: pointer;
+  z-index: 10;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+
+.header__leaderboard:hover button {
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+  text-decoration: underline;
+}
+
+.header__walletBtn {
+  font-weight: 600;
+  font-size: 1rem;
+  border: 2px solid #fff;
+  border-radius: 60px;
+  padding: 0.9375rem 0.9375rem 0.8125rem 0.9375rem;
+  z-index: 10;
+  cursor: pointer;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+
+.header__walletBtn:hover {
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+  color: #000000;
+  background-color: #ffffff;
 }
 
 /*
@@ -344,6 +405,88 @@ h6 {
 }
 */
 
-.mainContent__gradient svg {
-  width: 100%;
+.mainContent {
+  position: relative;
 }
+
+.mainContent__container {
+  max-width: 90rem;
+  padding: 0 8.125rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  margin: 5.25rem 0 0 0;
+}
+
+.mainContent__gradient {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  z-index: 5;
+}
+
+.mainContent__phaseOne {
+  max-width: 23.75rem;
+  z-index: 10;
+}
+
+.mainContent__title {
+  margin: 9.375rem 0 0 0;
+  font-weight: 900;
+  font-size: 2.5rem;
+  line-height: 100%;
+}
+
+.mainContent__descr {
+  margin: 2.1875rem 0 0 0;
+  font-weight: 400;
+  font-size: 1.125rem;
+  line-height: 130%;
+}
+
+.mainContent__startBtn {
+  margin: 13.75rem 0 0 0;
+}
+
+.mainContent__startBtn button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 2px solid #fff;
+  border-radius: 60px;
+  font-weight: 600;
+  font-size: 1.375rem;
+  padding: 1.4063rem 2.4375rem 1.3438rem 2.4375rem;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+
+.mainContent__startBtn svg {
+  margin-left: 10px;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+  fill: black;
+}
+
+.mainContent__startBtn:hover button {
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.mainContent__startBtn:hover svg {
+  fill: #000000;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+
+.webp .wrapper{ background-image: url(img/bg.webp); }
