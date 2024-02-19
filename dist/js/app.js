@@ -282,6 +282,13 @@
     flsModules.popup = new Leaderboard({});
     document.querySelector(".soundToggler__itemOn");
     document.querySelector(".soundToggler__itemOff");
+    const phaseOne = document.querySelector(".mainContent__phaseOne");
+    const phaseTwo = document.querySelector(".mainContent__phaseTwo");
+    const startFarm = document.querySelector(".mainContent__startBtn");
+    if (startFarm) startFarm.addEventListener("click", (function(e) {
+        phaseTwo.classList.add("_active");
+        phaseOne.classList.add("_hide");
+    }));
     window["FLS"] = true;
     isWebp();
 })();

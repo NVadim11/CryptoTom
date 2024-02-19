@@ -493,6 +493,16 @@ body::after {
   display: none;
 }
 
+._hide {
+  display: none;
+}
+
+._active {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+}
+
 .header {
   background: transparent;
   width: 100%;
@@ -645,6 +655,11 @@ body::after {
   z-index: 10;
 }
 
+.mainContent__phaseTwo {
+  display: none;
+  height: 50rem;
+}
+
 .mainContent__title {
   margin: 9.375rem 0 0 0;
   font-weight: 900;
@@ -697,6 +712,27 @@ body::after {
   fill: #000000;
   -webkit-transition: 0.25s;
   transition: 0.25s;
+}
+
+.mainContent__catBox {
+  cursor: pointer;
+  position: absolute;
+  width: 73.75rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+}
+
+.mainContent__catBox img {
+  width: 18.125rem;
+}
+
+.mainContent__catMeow {
+  display: none;
 }
 
 @media (max-width: 119.99875em) {
