@@ -1,5 +1,8 @@
 @charset "UTF-8";
 
+.no-webp .wrapper{
+  background-image: url("../img/bg.png"); }
+
 .wrapper {
   background-color: #000000;
   min-height: 100%;
@@ -11,7 +14,6 @@
       -ms-flex-direction: column;
           flex-direction: column;
   position: relative;
-  background-image: url("img/bg.webp");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -787,3 +789,5 @@ body::after {
     display: flex;
   }
 }
+
+.webp .wrapper{ background-image: url(../img/bg.webp); }
