@@ -65,8 +65,14 @@
             background-color: #ffffff;
         }
         svg {
-            fill: #000000;
+            fill: #ffffff;
             transition: .25s;
+            circle {
+                stroke: #000000;
+            }
+            path {
+                fill: #000000;
+            }
         }
     }
     &__catBox {
