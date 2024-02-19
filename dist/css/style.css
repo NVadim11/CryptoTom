@@ -647,7 +647,7 @@ body::after {
 }
 
 .mainContent__phaseOne {
-  height: 47.8125rem;
+  height: 38.125rem;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -660,7 +660,7 @@ body::after {
 
 .mainContent__phaseTwo {
   display: none;
-  height: 47.8125rem;
+  height: 38.125rem;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
