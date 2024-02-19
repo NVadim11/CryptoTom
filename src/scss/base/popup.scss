@@ -11,31 +11,36 @@ body::after {
 	pointer-events: none;
 	z-index: 149;
 }
-.popup-show body::after {
+.popup-show body::after,
+.popupLeaderboard-show body::after {
 	opacity: 1;
 }
-.popup {
+.popup,
+.popupLeaderboard {
 	position: fixed;
 	top: 0;
 	left: 0;
 	bottom: 0;
 	right: 0;
-	padding: 30px 10px;
+	padding: 1.875rem 0.625rem;
 	transition: visibility 0.8s ease 0s;
 	visibility: hidden;
 	pointer-events: none;
 }
-.popup_show {
+.popup_show,
+.popupLeaderboard_show {
 	z-index: 150;
 	visibility: visible;
 	overflow: auto;
 	pointer-events: auto;
 }
-.popup_show .popup__content {
+.popup_show .popup__content,
+.popupLeaderboard_show .popupLeaderboard__content {
 	visibility: visible;
 	transform: scale(1);
 }
-.popup__wrapper {
+.popup__wrapper,
+.popupLeaderboard__wrapper {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -46,16 +51,85 @@ body::after {
 	justify-content: center;
 	align-items: center;
 }
-.popup__content {
+.popup__content,
+.popupLeaderboard__content {
 	visibility: hidden;
 	transform: scale(0);
 	transition: transform 0.3s ease 0s;
 	background-color: #eee;
-	padding: 20px;
+	padding: 1.25rem;
 	width: 100%;
-	max-width: 900px;
-	border-radius: 20px;
+	max-width: 56.25rem;
+	border-radius: 1.25rem;
 	.lock & {
 		visibility: visible;
+	}
+}
+
+// Leaderboard popup
+.popupLeaderboard {
+	&__wrapper {
+	}
+	&__content {
+		position: relative;
+		max-width: fit-content;
+		padding: 2.4375rem 3.0625rem;
+		border-radius: 1.875rem;
+		backdrop-filter: blur(1.5rem);
+		box-shadow: inset -0.25rem -0.25rem 0.25rem 0 rgba(0, 0, 0, 0.25);
+		background: linear-gradient(180deg, #5a16c9 0%, #27075b 100%);
+	}
+	&__close {
+		position: absolute;
+		top: 1.875rem;
+		right: 1.875rem;
+	}
+	&__title {	
+		position: absolute;	
+		top: 2.4375rem;
+		left: 3.0625rem;
+		font-weight: 900;
+		font-size: 2.5rem;
+		line-height: 100%;
+		color: #fff;
+	}
+	&__crownIcon {
+		max-width: fit-content;
+		margin: 4rem 0 0.5625rem 3.0625rem;
+	}
+	&__playerList {
+		display: flex;
+	}
+	&__table {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+	}
+	&__tableItem {
+		border: 0.125rem solid #fff;
+		display: flex;
+		border-radius: 3.75rem;
+		padding: 0.9375rem 0.9375rem 0.9375rem 0.9375rem;
+		margin-bottom: 0.625rem;		
+	}
+	&__itemData {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		font-weight: 600;
+		font-size: 1.375rem;
+		line-height: 130%;
+		color: #fff;		
+	}
+	&__id {
+		margin-right: 0.625rem;
+	}
+	&__playerIcon {
+		margin-right: 0.625rem;
+	}
+	&__playerName {
+		margin-right: 10.9375rem;
+	}
+	&__coins {		
 	}
 }

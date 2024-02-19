@@ -54,22 +54,20 @@
             if (window.FLS) console.log(message);
         }), 0);
     }
-    class Popup {
+    class Leaderboard {
         constructor(options) {
             let config = {
                 logging: true,
                 init: true,
-                attributeOpenButton: "data-popup",
-                attributeCloseButton: "data-close",
+                attributeOpenButton: "data-leaderboard-popup",
+                attributeCloseButton: "data-leaderboard-close",
                 fixElementSelector: "[data-lp]",
-                youtubeAttribute: "data-popup-youtube",
-                youtubePlaceAttribute: "data-popup-youtube-place",
-                setAutoplayYoutube: true,
                 classes: {
-                    popup: "popup",
-                    popupContent: "popup__content",
-                    popupActive: "popup_show",
-                    bodyActive: "popup-show"
+                    popup: "popupLeaderboard",
+                    popupWrapper: "popupLeaderboard__wrapper",
+                    popupContent: "popupLeaderboard__content",
+                    popupActive: "popupLeaderboard_show",
+                    bodyActive: "popupLeaderboard-show"
                 },
                 focusCatch: true,
                 closeEsc: true,
@@ -186,19 +184,6 @@
                 if (!this._reopen) this.previousActiveElement = document.activeElement;
                 this.targetOpen.element = document.querySelector(this.targetOpen.selector);
                 if (this.targetOpen.element) {
-                    if (this.youTubeCode) {
-                        const codeVideo = this.youTubeCode;
-                        const urlVideo = `https://www.youtube.com/embed/${codeVideo}?rel=0&showinfo=0&autoplay=1`;
-                        const iframe = document.createElement("iframe");
-                        iframe.setAttribute("allowfullscreen", "");
-                        const autoplay = this.options.setAutoplayYoutube ? "autoplay;" : "";
-                        iframe.setAttribute("allow", `${autoplay}; encrypted-media`);
-                        iframe.setAttribute("src", urlVideo);
-                        if (!this.targetOpen.element.querySelector(`[${this.options.youtubePlaceAttribute}]`)) {
-                            this.targetOpen.element.querySelector(".popup__text").setAttribute(`${this.options.youtubePlaceAttribute}`, "");
-                        }
-                        this.targetOpen.element.querySelector(`[${this.options.youtubePlaceAttribute}]`).appendChild(iframe);
-                    }
                     if (this.options.hashSettings.location) {
                         this._getHash();
                         this._setHash();
@@ -239,7 +224,6 @@
                     popup: this
                 }
             }));
-            if (this.youTubeCode) if (this.targetOpen.element.querySelector(`[${this.options.youtubePlaceAttribute}]`)) this.targetOpen.element.querySelector(`[${this.options.youtubePlaceAttribute}]`).innerHTML = "";
             this.previousOpen.element.classList.remove(this.options.classes.popupActive);
             this.previousOpen.element.setAttribute("aria-hidden", "true");
             if (!this._reopen) {
@@ -269,7 +253,6 @@
         _openToHash() {
             let classInHash = document.querySelector(`.${window.location.hash.replace("#", "")}`) ? `.${window.location.hash.replace("#", "")}` : document.querySelector(`${window.location.hash}`) ? `${window.location.hash}` : null;
             const buttons = document.querySelector(`[${this.options.attributeOpenButton} = "${classInHash}"]`) ? document.querySelector(`[${this.options.attributeOpenButton} = "${classInHash}"]`) : document.querySelector(`[${this.options.attributeOpenButton} = "${classInHash.replace(".", "#")}"]`);
-            this.youTubeCode = buttons.getAttribute(this.options.youtubeAttribute) ? buttons.getAttribute(this.options.youtubeAttribute) : null;
             if (buttons && classInHash) this.open(classInHash);
         }
         _setHash() {
@@ -296,7 +279,7 @@
             this.options.logging ? FLS(`[Попапос]: ${message}`) : null;
         }
     }
-    flsModules.popup = new Popup({});
+    flsModules.popup = new Leaderboard({});
     document.querySelector(".soundToggler__itemOn");
     document.querySelector(".soundToggler__itemOff");
     window["FLS"] = true;
