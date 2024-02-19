@@ -1,3 +1,97 @@
 //====================================================================================================
+.footer {
+	display: flex;
+	padding: 0 8.125rem;
+	&__container {
+		width: 100%;
+		margin-bottom: 2.75rem;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+	}
+	.soundToggler {
+		overflow: hidden;
+		border-radius: 3.75rem;
+		.soundToggler__itemOn {
+		}
+		.soundToggler__itemOff {
+		}
+	}
+	.soundToggler:hover {
+		cursor: pointer;
+	}
+
+	&__sayBtn {
+		display: flex;
+		button {
+			border: 0.125rem solid #fff;
+			border-radius: 3.75rem;
+			overflow: hidden;
+			font-size: 1.375rem;
+			padding: 0.9375rem 4.0625rem;
+			display: flex;
+			align-items: center;
+			text-align: center;
+			svg {
+				margin: 0 0.3125rem;
+			}
+		}
+		button:hover {
+			transition: .25s;
+      color: #000000;
+      background-color: #ffffff;
+			svg {
+				fill: #ffffff;
+        transition: .25s;
+				defs {
+					image {
+						transition: .25s;
+						filter: invert(100%);
+					}					
+				}
+			}
+		}
+	}
+	&__socials {
+		display: flex;
+		flex-direction: row;
+		gap: 0.75rem;
+	}
+	&__twBtn {
+		border: 0.125rem solid #fff;
+		border-radius: 3.75rem;
+		padding: 1rem 1.0625rem 0.875rem 0.8125rem;
+		width: 3.125rem;
+		height: 3.125rem;
+		font-weight: 600;
+		font-size: 1rem;
+		text-transform: uppercase;
+		color: #fff;
+	}
+	&__twBtn:hover {
+		transition: .25s;
+		color: #000000;
+		background-color: #ffffff;
+		cursor: pointer;
+	}
+	&__tgBtn {
+		border: 0.125rem solid #fff;
+		border-radius: 3.75rem;
+		padding: 1rem 1.0625rem 0.875rem 0.8125rem;
+		width: 3.125rem;
+		height: 3.125rem;
+		font-weight: 600;
+		font-size: 1rem;
+		text-transform: uppercase;
+		color: #fff;
+	}
+	&__tgBtn:hover {
+		transition: .25s;
+		color: #000000;
+		background-color: #ffffff;
+		cursor: pointer;
+	}
+}
 
 //====================================================================================================
