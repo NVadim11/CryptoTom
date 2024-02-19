@@ -1,5 +1,8 @@
 @charset "UTF-8";
 
+.no-webp .wrapper{
+  background-image: url("img/bg.png"); }
+
 .wrapper {
   background-color: #000000;
   min-height: 100%;
@@ -11,7 +14,6 @@
       -ms-flex-direction: column;
           flex-direction: column;
   position: relative;
-  background-image: url("img/bg.webp");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -274,7 +276,7 @@ h6 {
 
 body::after {
   content: "";
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.25);
   position: fixed;
   width: 100%;
   height: 100%;
@@ -377,10 +379,10 @@ body::after {
   border-radius: 1.875rem;
   -webkit-backdrop-filter: blur(1.5rem);
           backdrop-filter: blur(1.5rem);
-  -webkit-box-shadow: inset -0.25rem -0.25rem 0.25rem 0 rgba(0, 0, 0, 0.25);
-          box-shadow: inset -0.25rem -0.25rem 0.25rem 0 rgba(0, 0, 0, 0.25);
-  background: -webkit-gradient(linear, left top, left bottom, from(#5a16c9), to(#27075b));
-  background: linear-gradient(180deg, #5a16c9 0%, #27075b 100%);
+  -webkit-box-shadow: inset -4px -4px 4px 0 rgba(0, 0, 0, 0.25);
+          box-shadow: inset -4px -4px 4px 0 rgba(0, 0, 0, 0.25);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(91, 22, 201, 0.4588235294)), to(rgba(39, 7, 91, 0.1294117647)));
+  background: linear-gradient(180deg, rgba(91, 22, 201, 0.4588235294) 0%, rgba(39, 7, 91, 0.1294117647) 100%);
 }
 
 .popupLeaderboard__close {
@@ -787,3 +789,5 @@ body::after {
     display: flex;
   }
 }
+
+.webp .wrapper{ background-image: url(img/bg.webp); }
