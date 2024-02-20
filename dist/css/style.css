@@ -869,8 +869,8 @@ body::after {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border: 2px solid #fff;
-  border-radius: 60px;
+  border: 0.125rem solid #fff;
+  border-radius: 3.75rem;
   font-weight: 600;
   font-size: 1.375rem;
   padding: 1.4063rem 2.4375rem 1.3438rem 2.4375rem;
@@ -879,7 +879,9 @@ body::after {
 }
 
 .mainContent__startBtn button svg {
-  margin-left: 10px;
+  margin-left: 0.625rem;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
   fill: black;
 }
 
@@ -949,12 +951,14 @@ body::after {
 }
 
 .mainContent__catBox {
+  overflow: hidden;
   position: absolute;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   top: 0;
-  margin-top: 4.5625rem;
+  z-index: 5;
+  margin-top: 146px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -974,8 +978,106 @@ body::after {
   width: 18.125rem;
 }
 
+.mainContent__catIdle {
+  z-index: 15;
+}
+
 .mainContent__catMeow {
+  z-index: 15;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   display: none;
+}
+
+.mainContent__catMeow:hover {
+  cursor: pointer;
+}
+
+.mainContent__energyBox {
+  position: absolute;
+  top: 1.25rem;
+  left: 1.25rem;
+}
+
+.mainContent__progressBar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  font-weight: 600;
+  font-size: 1.375rem;
+  color: #fff;
+}
+
+.mainContent__progressBar .progressCount {
+  margin-left: 7px;
+}
+
+.mainContent__energyBar {
+  margin-top: 0.625rem;
+  -webkit-box-shadow: inset 0 0.25rem 0.25rem 0 rgba(0, 0, 0, 0.25);
+          box-shadow: inset 0 0.25rem 0.25rem 0 rgba(0, 0, 0, 0.25);
+  background: rgba(0, 0, 0, 0.16);
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 1.25rem;
+  width: 13.3125rem;
+  height: 0.9375rem;
+}
+
+.mainContent__energyBar progress {
+  border-radius: 20px;
+  width: 100%;
+  height: 100%;
+}
+
+.mainContent__energyBar progress::-webkit-progress-bar {
+  background-color: rgba(0, 0, 0, 0.16);
+  border-radius: 1.25rem;
+  -webkit-box-shadow: inset 0 0.25rem 0.25rem 0 rgba(0, 0, 0, 0.25);
+          box-shadow: inset 0 0.25rem 0.25rem 0 rgba(0, 0, 0, 0.25);
+}
+
+.mainContent__energyBar progress::-webkit-progress-value {
+  background-color: #7f4dd1;
+  border-radius: 1.25rem;
+  -webkit-box-shadow: inset 0 0.25rem 0.25rem 0 rgba(0, 0, 0, 0.25);
+          box-shadow: inset 0 0.25rem 0.25rem 0 rgba(0, 0, 0, 0.25);
+}
+
+.mainContent__coinBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  padding: 1.125rem 0.875rem 0.6875rem 0.875rem;
+  -webkit-box-shadow: inset -0.25rem -0.25rem 0.25rem 0 rgba(0, 0, 0, 0.25);
+          box-shadow: inset -0.25rem -0.25rem 0.25rem 0 rgba(0, 0, 0, 0.25);
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 1.25rem;
+}
+
+.mainContent__coinImg {
+  margin-right: 0.625rem;
 }
 
 @media (max-width: 119.99875em) {

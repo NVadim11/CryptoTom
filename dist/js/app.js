@@ -306,6 +306,15 @@
     document.addEventListener("click", (function(event) {
         if (event.target !== mobileMenu) mobileMenu.classList.remove("_active");
     }));
+    if (catActive) {
+        let limit = parseInt(document.getElementById("progressCount").innerHTML, 10);
+        let filledBar = document.getElementById("filledBar");
+        catActive.addEventListener("click", (function() {
+            let energyProgress = filledBar.value;
+            document.getElementById("progressCount").innerHTML = --limit;
+            filledBar.value = --energyProgress;
+        }));
+    }
     window["FLS"] = true;
     isWebp();
 })();

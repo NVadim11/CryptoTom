@@ -47,3 +47,17 @@ document.addEventListener('click', function (event) {
         mobileMenu.classList.remove('_active');
     }
 });
+
+// Coin clicker
+if(catActive) {
+    // Energy bar
+    let limit = parseInt(document.getElementById("progressCount").innerHTML, 10);
+    let filledBar = document.getElementById("filledBar");
+
+
+    catActive.addEventListener("click", (function () {
+    let energyProgress = filledBar.value;
+    document.getElementById("progressCount").innerHTML = --limit;
+    filledBar.value = --energyProgress;
+    }))
+} 
