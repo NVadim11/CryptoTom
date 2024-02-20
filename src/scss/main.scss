@@ -20,6 +20,9 @@
         position: relative;
         display: flex;
         flex-direction: column;
+        .mainContent__catBox {
+            position: absolute;
+        }
     }
     &__phaseTwo {
         display: none;
@@ -27,6 +30,9 @@
         flex-direction: column;
         justify-content: flex-end;
         position: relative;
+        .mainContent__catBox {
+            position: relative;
+        }
     }
     &__sayBtn {
     }
@@ -111,8 +117,6 @@
 		}
 	}
     &__catBox {
-        overflow: hidden;
-        position: absolute;
         justify-content: center;
         top: 0;
         z-index: 5;
@@ -194,7 +198,6 @@
     &__coinImg {
         margin-right: 0.625rem;
     }
-    &__coinAmount {        
-
+    &__coinAmount {  
     }
 }

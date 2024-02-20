@@ -306,13 +306,15 @@
     document.addEventListener("click", (function(event) {
         if (event.target !== mobileMenu) mobileMenu.classList.remove("_active");
     }));
-    if (catActive) {
+    if (sayCat) {
         let limit = parseInt(document.getElementById("progressCount").innerHTML, 10);
+        let currCoins = parseInt(document.getElementById("coinAmount").innerHTML, 10);
         let filledBar = document.getElementById("filledBar");
-        catActive.addEventListener("click", (function() {
+        sayCat.addEventListener("click", (function() {
             let energyProgress = filledBar.value;
             document.getElementById("progressCount").innerHTML = --limit;
             filledBar.value = --energyProgress;
+            document.getElementById("coinAmount").innerHTML = ++currCoins;
         }));
     }
     window["FLS"] = true;

@@ -827,6 +827,10 @@ body::after {
           flex-direction: column;
 }
 
+.mainContent__phaseOne .mainContent__catBox {
+  position: absolute;
+}
+
 .mainContent__phaseTwo {
   display: none;
   height: 38.125rem;
@@ -837,6 +841,10 @@ body::after {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  position: relative;
+}
+
+.mainContent__phaseTwo .mainContent__catBox {
   position: relative;
 }
 
@@ -953,8 +961,6 @@ body::after {
 }
 
 .mainContent__catBox {
-  overflow: hidden;
-  position: absolute;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
