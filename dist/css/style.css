@@ -521,24 +521,28 @@ body::after {
       -ms-flex-align: center;
           align-items: center;
   margin: 0 auto;
-  max-width: 120rem;
+  width: 120rem;
 }
 
 .header__logo {
   cursor: pointer;
   z-index: 10;
-  scale: 1.2;
+}
+
+.header__logo img {
+  width: 17.25rem;
+  height: 2.85rem;
 }
 
 .header__leaderboard {
   font-weight: 500;
-  font-size: 1.125rem;
+  font-size: 1.8rem;
   line-height: 130%;
   cursor: pointer;
   z-index: 10;
   -webkit-transition: 0.25s;
   transition: 0.25s;
-  scale: 1.2;
+  margin-right: 4rem;
 }
 
 .header__leaderboard:hover button {
@@ -549,15 +553,14 @@ body::after {
 
 .header__walletBtn {
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 1.25rem;
   border: 2px solid #fff;
   border-radius: 60px;
-  padding: 0.9375rem 0.9375rem 0.8125rem 0.9375rem;
   z-index: 10;
   cursor: pointer;
   -webkit-transition: 0.25s;
   transition: 0.25s;
-  scale: 1.2;
+  padding: 1.5625rem 1.5625rem 1.4375rem 1.5625rem;
 }
 
 .header__walletBtn:hover {
@@ -627,25 +630,23 @@ body::after {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 0 8.125rem;
+  width: 120rem;
+  margin: 0 auto;
+  padding: 2.75rem 0;
 }
 
 .footer__container {
+  padding: 0 8.125rem;
   width: 100%;
-  margin-bottom: 2.75rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .footer .soundToggler {
@@ -661,6 +662,7 @@ body::after {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-left: 4.375rem;
 }
 
 .footer__sayBtn button {
@@ -764,8 +766,7 @@ body::after {
           flex-direction: column;
   width: 100%;
   margin: 5.25rem 0 0 0;
-  max-width: 120rem;
-  padding: 0 8.125rem;
+  width: 120rem;
   margin: 0 auto;
 }
 
@@ -898,23 +899,29 @@ body::after {
   }
 
   .header__container {
-    max-width: 90rem;
+    width: 90rem;
   }
 
-  .header__logo {
-    scale: 1;
+  .header__logo img {
+    width: 14.375rem;
+    height: 2.375rem;
   }
 
   .header__leaderboard {
-    scale: 1;
+    font-size: 1.125rem;
   }
 
   .header__walletBtn {
-    scale: 1;
+    padding: 0.9375rem 0.9375rem 0.8125rem 0.9375rem;
+    font-size: 1rem;
+  }
+
+  .footer {
+    width: 90rem;
   }
 
   .mainContent__container {
-    max-width: 90rem;
+    width: 90rem;
   }
 }
 

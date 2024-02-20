@@ -5,11 +5,10 @@
         flex-direction: column;
         width: 100%;
         margin: 5.25rem 0 0 0;
-        max-width: 120rem;
-        padding: 0 8.125rem;
+        width: 120rem;
         margin: 0 auto;
-		@media (max-width: $fp) {
-			max-width: 90rem;
+		@media (max-width: $desktop) {
+			width: 90rem;
 		}
     }
     &__gradient {
@@ -36,7 +35,7 @@
         font-weight: 900;
         font-size: 2.5rem;
         line-height: 100%;
-           max-width: 23.75rem;
+        max-width: 23.75rem;
     }
     &__descr {
         margin: 2.1875rem 0 0 0;

@@ -1,14 +1,18 @@
 //====================================================================================================
 .footer {
 	display: flex;
-	padding: 0 8.125rem;
+	width: 120rem;
+	margin: 0 auto;
+	padding: 2.75rem 0;
+		@media (max-width: $desktop) {
+			width: 90rem;
+		}
 	&__container {
+		padding: 0 8.125rem;
 		width: 100%;
-		margin-bottom: 2.75rem;
 		display: flex;
-		flex-direction: row;
-		align-items: center;
 		justify-content: space-between;
+		align-items: center;
 	}
 	.soundToggler {
 		overflow: hidden;
@@ -24,6 +28,7 @@
 
 	&__sayBtn {
 		display: flex;
+		margin-left: 4.375rem;
 		button {
 			border: 0.125rem solid #fff;
 			border-radius: 3.75rem;

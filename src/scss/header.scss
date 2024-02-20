@@ -3,7 +3,7 @@
 	background: transparent;
 	width: 100%;
 	padding: 1.5rem 0;
-	@media (max-width: $fp) {
+	@media (max-width: $desktop) {
 		padding: 1.25rem 0;
 	}
 	&__container {
@@ -12,38 +12,40 @@
 		justify-content: space-between;
 		align-items: center;
 		margin: 0 auto;
-		max-width: 120rem;
-		@media (max-width: $fp) {
-			max-width: 90rem;
+		width: 120rem;
+		@media (max-width: $desktop) {
+			width: 90rem;
 		}
 	}
 	&__logo {
 		cursor: pointer;
 		z-index: 10;
-		scale: 1.2;
 		img {
-			@media (max-width: $bp) {
+			width: 17.25rem;
+			height: 2.85rem;
+			@media (max-width: $mobile) {
 				height: 1.375rem;
 				width: 8.5rem;
 			}
-		}
-		@media (max-width: $fp) {
-			scale: 1;
+			@media (max-width: $desktop) {
+				width: 14.375rem;
+				height: 2.375rem;
+			}
 		}
 	}
 	&__leaderboard {
 		font-weight: 500;
-		font-size: 1.125rem;
+		font-size: 1.8rem;
 		line-height: 130%;
 		cursor: pointer;
 		z-index: 10;
 		transition: .25s;
-		scale: 1.2;
-		@media (max-width: $bp) {
+		margin-right: 4rem;
+		@media (max-width: $mobile) {
 			display: none;
 		}
-		@media (max-width: $fp) {
-			scale: 1;
+		@media (max-width: $desktop) {
+			font-size: 1.125rem;
 		}
 	}
 	&__leaderboard:hover {
@@ -54,19 +56,19 @@
 	}
 	&__walletBtn {
 		font-weight: 600;
-		font-size: 1rem;
+		font-size: 1.25rem;
 		border: 2px solid #fff;
 		border-radius: 60px;
-		padding: 0.9375rem 0.9375rem 0.8125rem 0.9375rem;
 		z-index: 10;
 		cursor: pointer;
 		transition: .25s;
-		scale: 1.2;
-		@media (max-width: $bp) {
+		padding: 1.5625rem 1.5625rem 1.4375rem 1.5625rem;
+		@media (max-width: $mobile) {
 			display: none;
 		}
-		@media (max-width: $fp) {
-			scale: 1;
+		@media (max-width: $desktop) {
+			padding: 0.9375rem 0.9375rem 0.8125rem 0.9375rem;
+			font-size: 1rem;
 		}
 	}
 	&__walletBtn:hover {
@@ -76,7 +78,7 @@
 	}
 	&__mobileBtns {
 		display: none;
-		@media (max-width: $bp) {
+		@media (max-width: $mobile) {
 			display: flex;
 		}
 	}
