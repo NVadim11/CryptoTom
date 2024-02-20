@@ -79,7 +79,38 @@
         }
     }
     }
-
+    &__sayBtn {
+		display: flex;
+        margin-top: 2.8125rem;
+		button {
+			border: 0.125rem solid #fff;
+			border-radius: 3.75rem;
+			overflow: hidden;
+			font-size: 1.375rem;
+			padding: 0.9375rem 4.0625rem;
+			display: flex;
+			align-items: center;
+			text-align: center;
+			svg {
+				margin: 0 0.3125rem;
+			}
+		}
+		button:hover {
+			transition: .25s;
+      color: #000000;
+      background-color: #ffffff;
+			svg {
+				fill: #ffffff;
+        transition: .25s;
+				defs {
+					image {
+						transition: .25s;
+						filter: invert(100%);
+					}					
+				}
+			}
+		}
+	}
     &__catBox {
         position: absolute;
         justify-content: center;
@@ -87,6 +118,8 @@
         margin-top: 4.5625rem;
         display: flex;
         align-self: center;
+        flex-direction: column;
+        align-items: center;
         img {
             width: 18.125rem;
         }
