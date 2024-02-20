@@ -7,6 +7,9 @@
 		@media (max-width: $desktop) {
 			width: 90rem;
 		}
+		@media (max-width: $mobile) {
+			padding: 0;
+		}
 	&__container {
 		padding: 0 8.125rem;
 		width: 100%;
@@ -14,21 +17,13 @@
 		justify-content: space-between;
 		align-items: center;
 	}
-	.soundToggler {
-		overflow: hidden;
-		border-radius: 3.75rem;
-		.soundToggler__itemOn {
-		}
-		.soundToggler__itemOff {
-		}
-	}
-	.soundToggler:hover {
-		cursor: pointer;
-	}	
 	&__socials {
 		display: flex;
 		flex-direction: row;
 		gap: 0.75rem;
+		@media (max-width: $mobile) {
+			display: none;
+		}
 	}
 	&__twBtn {
 		border: 0.125rem solid #fff;

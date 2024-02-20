@@ -8,7 +8,8 @@
 	background-image: url("../img/bg.png");
 	background-repeat: no-repeat;
 	background-position: center;
-	background-size: cover
+	background-size: cover;
+	position: relative;
 }
 // Підключення міксинів ===========================================================================================================================================================================================================================================================================
 @import "base/mixins";
@@ -162,5 +163,4 @@ body {
 @import "footer";
 
 // Підключення стилів окремих сторінок
-@import "home";
 @import "main";
