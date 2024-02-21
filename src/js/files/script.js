@@ -11,7 +11,7 @@ const burger = document.querySelector(".header__mobileBurger-btn");
 const mobileMenu = document.querySelector(".header__mobileMenu");
 const burgerLink = document.querySelector(".header__mobileMenu-links");
 
-var audio = new Audio('https://interactive-examples.mdn.mozilla.net/media/cc0-audio/t-rex-roar.mp3');
+let audio = new Audio('meow.mp3');
 function soundPlay() {    
     audio.play();
 }
