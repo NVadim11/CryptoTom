@@ -280,8 +280,8 @@
         }
     }
     flsModules.popup = new Leaderboard({});
-    const play = document.querySelector(".soundToggler__itemOn");
-    const pause = document.querySelector(".soundToggler__itemOff");
+    const soundOn = document.querySelector(".soundToggler__itemOn");
+    const soundOff = document.querySelector(".soundToggler__itemOff");
     const phaseOne = document.querySelector(".mainContent__phaseOne");
     const phaseTwo = document.querySelector(".mainContent__phaseTwo");
     const startFarm = document.querySelector(".mainContent__startBtn");
@@ -292,17 +292,26 @@
     const burger = document.querySelector(".header__mobileBurger-btn");
     const mobileMenu = document.querySelector(".header__mobileMenu");
     const burgerLink = document.querySelector(".header__mobileMenu-links");
-    if (play) play.addEventListener("click", (function(e) {
-        play.classList.remove("_active");
-        play.classList.add("_hide");
-        pause.classList.remove("_hide");
-        pause.classList.add("_active");
+    var audio = new Audio("https://interactive-examples.mdn.mozilla.net/media/cc0-audio/t-rex-roar.mp3");
+    function soundPlay() {
+        audio.play();
+    }
+    function toggleMuteAllSounds() {
+        audio.muted = !audio.muted;
+    }
+    if (soundOn) soundOn.addEventListener("click", (function(e) {
+        soundOn.classList.remove("_active");
+        soundOn.classList.add("_hide");
+        soundOff.classList.remove("_hide");
+        soundOff.classList.add("_active");
+        toggleMuteAllSounds();
     }));
-    if (pause) pause.addEventListener("click", (function(e) {
-        play.classList.add("_active");
-        play.classList.remove("_hide");
-        pause.classList.add("_hide");
-        pause.classList.remove("_active");
+    if (soundOff) soundOff.addEventListener("click", (function(e) {
+        soundOn.classList.add("_active");
+        soundOn.classList.remove("_hide");
+        soundOff.classList.add("_hide");
+        soundOff.classList.remove("_active");
+        toggleMuteAllSounds();
     }));
     if (startFarm) startFarm.addEventListener("click", (function(e) {
         phaseTwo.classList.add("_active");
@@ -340,6 +349,7 @@
             document.getElementById("progressCount").innerHTML = --limit;
             filledBar.value = --energyProgress;
             document.getElementById("coinAmount").innerHTML = ++currCoins;
+            soundPlay();
         }));
     }
     window["FLS"] = true;
