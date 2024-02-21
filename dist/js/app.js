@@ -290,6 +290,7 @@
     const catActive = document.getElementById("catActive");
     const burger = document.querySelector(".header__mobileBurger-btn");
     const mobileMenu = document.querySelector(".header__mobileMenu");
+    const burgerLink = document.querySelector(".header__mobileMenu-links");
     if (startFarm) startFarm.addEventListener("click", (function(e) {
         phaseTwo.classList.add("_active");
         phaseOne.classList.add("_hide");
@@ -304,7 +305,14 @@
         mobileMenu.classList.toggle("_active");
     }));
     document.addEventListener("click", (function(event) {
-        if (event.target !== mobileMenu) mobileMenu.classList.remove("_active");
+        if (event.target !== mobileMenu) {
+            burger.classList.remove("is-active");
+            mobileMenu.classList.remove("_active");
+        }
+    }));
+    if (burgerLink) burgerLink.addEventListener("click", (function(e) {
+        burger.classList.remove("is-active");
+        mobileMenu.classList.remove("_active");
     }));
     if (sayCat) {
         let limit = parseInt(document.getElementById("progressCount").innerHTML, 10);

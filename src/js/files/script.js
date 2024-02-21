@@ -11,6 +11,7 @@ const catActive = document.getElementById("catActive");
 
 const burger = document.querySelector(".header__mobileBurger-btn");
 const mobileMenu = document.querySelector(".header__mobileMenu");
+const burgerLink = document.querySelector(".header__mobileMenu-links");
 
 function toggleMute() {
     let myAudio = document.getElementById('audio');
@@ -44,9 +45,18 @@ if (burger) {
     
 document.addEventListener('click', function (event) {
     if (event.target !==  mobileMenu) {
+        burger.classList.remove('is-active');
         mobileMenu.classList.remove('_active');
     }
 });
+
+if (burgerLink) {
+    burgerLink.addEventListener("click", function(e) {
+        // e.stopPropagation();
+        burger.classList.remove('is-active');
+        mobileMenu.classList.remove('_active');
+    })
+}
 
 // Coin clicker
 if(sayCat) {
