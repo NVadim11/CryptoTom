@@ -1,4 +1,9 @@
 // Заголовки, загальні БЕМ блоки та інше...
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 .soundToggler {
     @media (max-width: $mobile) {
         position: absolute;
