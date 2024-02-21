@@ -1,14 +1,11 @@
 const play = document.querySelector(".soundToggler__itemOn");
 const pause = document.querySelector(".soundToggler__itemOff");
-
 const phaseOne = document.querySelector(".mainContent__phaseOne");
 const phaseTwo = document.querySelector(".mainContent__phaseTwo")
 const startFarm = document.querySelector(".mainContent__startBtn");
-
 const sayCat = document.querySelector(".mainContent__sayBtn");
 const catIdle = document.getElementById("catIdle");
 const catActive = document.getElementById("catActive");
-
 const burger = document.querySelector(".header__mobileBurger-btn");
 const mobileMenu = document.querySelector(".header__mobileMenu");
 const burgerLink = document.querySelector(".header__mobileMenu-links");

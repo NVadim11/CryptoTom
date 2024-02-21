@@ -168,6 +168,10 @@
   padding: 0px;
   margin: 0px;
   border: 0px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 *,
@@ -989,15 +993,7 @@ body::after {
 
 .mainContent__catMeow {
   z-index: 15;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
   display: none;
-}
-
-.mainContent__catMeow:hover {
-  cursor: pointer;
 }
 
 .mainContent__energyBox {
@@ -1064,6 +1060,7 @@ body::after {
 }
 
 .mainContent__coinBox {
+  position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1071,10 +1068,13 @@ body::after {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  position: absolute;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
   top: 1.25rem;
   right: 1.25rem;
-  padding: 1.125rem 0.875rem 0.6875rem 0.875rem;
+  padding: 0.6875rem 0.875rem 0.6875rem 0.875rem;
   -webkit-box-shadow: inset -0.25rem -0.25rem 0.25rem 0 rgba(0, 0, 0, 0.25);
           box-shadow: inset -0.25rem -0.25rem 0.25rem 0 rgba(0, 0, 0, 0.25);
   background: rgba(0, 0, 0, 0.05);
@@ -1082,7 +1082,75 @@ body::after {
 }
 
 .mainContent__coinImg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-right: 0.625rem;
+  width: 51px;
+  height: 52px;
+}
+
+.mainContent__coinImg img {
+  width: 100%;
+}
+
+.mainContent__coinAmount {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.mainContent__coinAmount span {
+  padding-top: 0.9375rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  font-weight: 600;
+  font-size: 3.5rem;
+  color: #fff;
+}
+
+.mainContent__backBtn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  position: absolute;
+  top: 0rem;
+  right: 18.75rem;
+  border: 0.125rem solid rgba(255, 255, 255, 0.5);
+  border-radius: 3.75rem;
+  padding: 1.125rem 1.5625rem 0.9375rem 1.4375rem;
+}
+
+.mainContent__backBtn button {
+  font-weight: 600;
+  font-size: 1.375rem;
+  line-height: 95%;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.mainContent__backBtn:hover {
+  cursor: pointer;
+  border: 0.125rem solid #fff;
+}
+
+.mainContent__backBtn:hover button {
+  color: #fff;
 }
 
 @media (max-width: 119.99875em) {
