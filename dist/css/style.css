@@ -199,6 +199,20 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+body::-webkit-scrollbar {
+  width: 0.3125rem;
+}
+
+body::-webkit-scrollbar-track {
+  background: rgba(15, 4, 36, 0.726);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: linear-gradient(146deg, #decaff 0%, #691ee2 100%);
+  border-radius: 1.25rem;
+  border: 0.1875rem solid rgba(105, 30, 226, 0.4588235294);
+}
+
 input,
 button,
 textarea {
@@ -995,7 +1009,7 @@ body::after {
 
 .mainContent__energyBox {
   position: absolute;
-  top: 1.25rem;
+  top: 2.5rem;
   left: 1.25rem;
 }
 

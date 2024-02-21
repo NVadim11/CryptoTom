@@ -280,20 +280,37 @@
         }
     }
     flsModules.popup = new Leaderboard({});
-    document.querySelector(".soundToggler__itemOn");
-    document.querySelector(".soundToggler__itemOff");
+    const play = document.querySelector(".soundToggler__itemOn");
+    const pause = document.querySelector(".soundToggler__itemOff");
     const phaseOne = document.querySelector(".mainContent__phaseOne");
     const phaseTwo = document.querySelector(".mainContent__phaseTwo");
     const startFarm = document.querySelector(".mainContent__startBtn");
+    const stopFarm = document.querySelector(".mainContent__backBtn");
     const sayCat = document.querySelector(".mainContent__sayBtn");
     const catIdle = document.getElementById("catIdle");
     const catActive = document.getElementById("catActive");
     const burger = document.querySelector(".header__mobileBurger-btn");
     const mobileMenu = document.querySelector(".header__mobileMenu");
     const burgerLink = document.querySelector(".header__mobileMenu-links");
+    if (play) play.addEventListener("click", (function(e) {
+        play.classList.remove("_active");
+        play.classList.add("_hide");
+        pause.classList.remove("_hide");
+        pause.classList.add("_active");
+    }));
+    if (pause) pause.addEventListener("click", (function(e) {
+        play.classList.add("_active");
+        play.classList.remove("_hide");
+        pause.classList.add("_hide");
+        pause.classList.remove("_active");
+    }));
     if (startFarm) startFarm.addEventListener("click", (function(e) {
         phaseTwo.classList.add("_active");
         phaseOne.classList.add("_hide");
+    }));
+    if (stopFarm) stopFarm.addEventListener("click", (function(e) {
+        phaseTwo.classList.remove("_active");
+        phaseOne.classList.remove("_hide");
     }));
     if (sayCat) sayCat.addEventListener("click", (function(e) {
         catActive.classList.add("_active");
