@@ -107,6 +107,10 @@
 			transition: .25s;
 			color: #000000;
 			background-color: #ffffff;
+			@media (max-width: $mobile) {
+				color: #ffffff;
+				background-color: transparent;
+			}
 		}
 	}
 

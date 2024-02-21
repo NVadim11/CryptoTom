@@ -11,6 +11,10 @@
 			width: 90rem;
             padding: 0 8.125rem;
 		}
+        @media (max-width: $mobile) {
+			width: 100%;
+            padding: 0 1.25rem;
+		}
     }
     &__gradient {
         display: flex;
@@ -21,10 +25,15 @@
         position: relative;
         display: flex;
         flex-direction: column;
-        @media (max-width: $desktop) {
-		}
+        .mainContent__catBox {
+            @media (max-width: $mobile) {
+                position: relative;
+                margin: 1.875rem 0 0 0;
+            }
+        }
         @media (max-width: $mobile) {
-		}
+            height: 100%;
+        }
     }
     &__phaseTwo {
         display: none;
@@ -32,6 +41,16 @@
         flex-direction: column;
         justify-content: flex-end;
         position: relative;
+        .mainContent__catBox {
+            @media (max-width: $mobile) {
+                position: relative;
+                margin: 1.875rem 0 0 0;
+                order: 2;
+            }
+        }
+        @media (max-width: $mobile) {
+            height: 100%;
+        }
     }
     &__title {
         margin: 5.375rem 0 0 0;
@@ -39,6 +58,12 @@
         font-size: 2.5rem;
         line-height: 100%;
         max-width: 23.75rem;
+        @media (max-width: $mobile) {
+			margin: 1.875rem 0 0 0;
+            font-size: 1.5rem;
+            max-width: 100%;
+            text-align: center;
+		}
     }
     &__descr {
         margin: 2.1875rem 0 0 0;
@@ -46,11 +71,16 @@
         font-weight: 400;
         font-size: 1.125rem;
         line-height: 130%;
+        @media (max-width: $mobile) {
+            font-size: 0.875rem;
+            max-width: 100%;
+            text-align: center;
+            margin: 0.9375rem 0 0 0;
+		}
     }
     &__startBtn {
         margin: 13.75rem 0 0 0;
         max-width: fit-content;
-        overflow: hidden;
         button {
             display: flex;
             align-items: center;
@@ -64,29 +94,50 @@
                 margin-left: 0.625rem;
                 transition: .25s;
             }
+            @media (max-width: $mobile) {
+                font-size: 1.125rem;
+                padding: 1.25rem 3rem 1.25rem 3rem;
+            }
         }
         button:hover {       
             transition: .25s;
             color: #000000;
-            background-color: #ffffff;      
+            background-color: #ffffff;    
+            @media (max-width: $mobile) {
+                color: #ffffff;
+                background-color: transparent;  
+            }  
         svg {
             fill: #ffffff;
+            @media (max-width: $mobile) {
+                stroke: #000000; 
+             }  
             circle {
                 stroke: #000000;
+                @media (max-width: $mobile) {
+                    stroke: #ffffff; 
+                 }  
             }
             path {
                 fill: #000000;
+                @media (max-width: $mobile) {
+                    fill: #FFFFFF;
+                 }  
             }
         }
-    }
+        }
+        @media (max-width: $mobile) {
+            margin: 1.875rem 0;
+            display: flex;
+            align-self: center;
+            order: 4;
+        }
     }
     &__sayBtn {
 		display: flex;
         align-self: center;
         position: relative;
 		button {
-            position: absolute;
-            right: -115px;
 			border: 0.125rem solid #fff;
 			border-radius: 3.75rem;
 			overflow: hidden;
@@ -99,13 +150,16 @@
 				margin: 0 0.3125rem;
 			}
 		}
+        @media (max-width: $mobile) {
+           order: 3;
+         }
 		button:hover {
 			transition: .25s;
-      color: #000000;
-      background-color: #ffffff;
+            color: #000000;
+            background-color: #ffffff;
 			svg {
 				fill: #ffffff;
-        transition: .25s;
+                transition: .25s;
 				defs {
 					image {
 						transition: .25s;
@@ -127,7 +181,11 @@
         align-items: center;
         img {
             width: 13.125rem;
+            @media (max-width: $mobile) {
+                width: 9.6875rem;
+            }
         }
+
     }
     &__catIdle {
         z-index: 15;
@@ -140,6 +198,10 @@
         position: absolute;
         top: 1.25rem;
         left: 1.25rem;
+        @media (max-width: $mobile) {
+            position: relative;
+            order: 4;
+         }
     }
     &__progressBar {
         display: flex;
@@ -192,6 +254,11 @@
         box-shadow: inset -0.25rem -0.25rem 0.25rem 0 rgba(0, 0, 0, 0.25);
         background: rgba(0, 0, 0, 0.05); 
         border-radius: 1.25rem;
+          @media (max-width: $mobile) {
+           position: relative;
+        //    margin: 2.375rem 0 0 0;
+           order: 1;
+        }
     }
     &__coinImg {
         display: flex;

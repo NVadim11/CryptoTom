@@ -865,7 +865,6 @@ body::after {
   max-width: -webkit-fit-content;
   max-width: -moz-fit-content;
   max-width: fit-content;
-  overflow: hidden;
 }
 
 .mainContent__startBtn button {
@@ -920,8 +919,6 @@ body::after {
 }
 
 .mainContent__sayBtn button {
-  position: absolute;
-  right: -115px;
   border: 0.125rem solid #fff;
   border-radius: 3.75rem;
   overflow: hidden;
@@ -1206,8 +1203,16 @@ body::after {
   }
 
   .soundToggler__itemOn button {
-    height: 35px;
-    width: 35px;
+    height: 2.1875rem;
+    width: 2.1875rem;
+  }
+
+  .soundToggler__itemOn button:hover svg path {
+    stroke: #ffffff;
+  }
+
+  .soundToggler__itemOn button:hover {
+    background-color: transparent;
   }
 
   .soundToggler__itemOff button svg {
@@ -1218,6 +1223,14 @@ body::after {
   .soundToggler__itemOff button {
     height: 35px;
     width: 35px;
+  }
+
+  .soundToggler__itemOff button:hover svg path {
+    stroke: #ffffff;
+  }
+
+  .soundToggler__itemOff button:hover {
+    background-color: transparent;
   }
 
   .header {
@@ -1260,6 +1273,11 @@ body::after {
     display: flex;
   }
 
+  .header__walletBtn button:hover {
+    color: #ffffff;
+    background-color: transparent;
+  }
+
   .header__mobileBurger-btn {
     display: block !important;
   }
@@ -1270,6 +1288,105 @@ body::after {
 
   .footer__socials {
     display: none;
+  }
+
+  .mainContent__container {
+    width: 100%;
+    padding: 0 1.25rem;
+  }
+
+  .mainContent__phaseOne .mainContent__catBox {
+    position: relative;
+    margin: 1.875rem 0 0 0;
+  }
+
+  .mainContent__phaseOne {
+    height: 100%;
+  }
+
+  .mainContent__phaseTwo .mainContent__catBox {
+    position: relative;
+    margin: 1.875rem 0 0 0;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+
+  .mainContent__phaseTwo {
+    height: 100%;
+  }
+
+  .mainContent__title {
+    margin: 1.875rem 0 0 0;
+    font-size: 1.5rem;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .mainContent__descr {
+    font-size: 0.875rem;
+    max-width: 100%;
+    text-align: center;
+    margin: 0.9375rem 0 0 0;
+  }
+
+  .mainContent__startBtn button {
+    font-size: 1.125rem;
+    padding: 1.25rem 3rem 1.25rem 3rem;
+  }
+
+  .mainContent__startBtn button:hover {
+    color: #ffffff;
+    background-color: transparent;
+  }
+
+  .mainContent__startBtn button:hover svg {
+    stroke: #000000;
+  }
+
+  .mainContent__startBtn button:hover svg circle {
+    stroke: #ffffff;
+  }
+
+  .mainContent__startBtn button:hover svg path {
+    fill: #FFFFFF;
+  }
+
+  .mainContent__startBtn {
+    margin: 1.875rem 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    -webkit-box-ordinal-group: 5;
+        -ms-flex-order: 4;
+            order: 4;
+  }
+
+  .mainContent__sayBtn {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+  }
+
+  .mainContent__catBox img {
+    width: 9.6875rem;
+  }
+
+  .mainContent__energyBox {
+    position: relative;
+    -webkit-box-ordinal-group: 5;
+        -ms-flex-order: 4;
+            order: 4;
+  }
+
+  .mainContent__coinBox {
+    position: relative;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
   }
 }
 

@@ -28,8 +28,8 @@
                 }
             }
             @media (max-width: $mobile) {
-                height: 35px;
-                width: 35px;
+                height: 2.1875rem;
+                width: 2.1875rem;
             }
         }
         button:hover {
@@ -39,7 +39,13 @@
                 path {
                     stroke: #000000;
                     transition: .25s;
+                    @media (max-width: $mobile) {
+                        stroke: #ffffff;
+                    }
                 }
+            }
+            @media (max-width: $mobile) {
+                background-color: transparent;
             }
         }
     }
@@ -75,7 +81,13 @@
                 path {
                     transition: .25s;
                     stroke: #000000;
+                    @media (max-width: $mobile) {
+                        stroke: #ffffff;
+                    }
                 }
+            }
+            @media (max-width: $mobile) {
+                background-color: transparent;
             }
         }
     }
