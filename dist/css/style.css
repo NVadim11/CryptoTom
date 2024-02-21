@@ -581,7 +581,7 @@ body::after {
 }
 
 .header__container {
-  padding: 0 8.125rem;
+  padding: 0 15.125rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -729,7 +729,7 @@ body::after {
 }
 
 .footer__container {
-  padding: 0 8.125rem;
+  padding: 0 15.125rem;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -794,7 +794,7 @@ body::after {
 }
 
 .mainContent__container {
-  padding: 0 8.125rem;
+  padding: 0 15.125rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1092,6 +1092,7 @@ body::after {
 
   .header__container {
     width: 90rem;
+    padding: 0 8.125rem;
   }
 
   .header__logo {
@@ -1112,8 +1113,13 @@ body::after {
     width: 90rem;
   }
 
+  .footer__container {
+    padding: 0 8.125rem;
+  }
+
   .mainContent__container {
     width: 90rem;
+    padding: 0 8.125rem;
   }
 }
 

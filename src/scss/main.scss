@@ -1,6 +1,6 @@
 .mainContent {
     &__container {
-		padding: 0 8.125rem;
+		padding: 0 15.125rem;
 		display: flex;
         flex-direction: column;
         width: 100%;
@@ -9,6 +9,7 @@
         margin: 0 auto;
 		@media (max-width: $desktop) {
 			width: 90rem;
+            padding: 0 8.125rem;
 		}
     }
     &__gradient {

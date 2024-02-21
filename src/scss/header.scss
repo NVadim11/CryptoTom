@@ -13,7 +13,7 @@
 		background: rgba(0, 0, 0, 0.1);
 	}
 	&__container {
-		padding: 0 8.125rem;
+		padding: 0 15.125rem;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
@@ -21,6 +21,7 @@
 		width: 120rem;
 		@media (max-width: $desktop) {
 			width: 90rem;
+			padding: 0 8.125rem;
 		}
 		@media (max-width: $mobile) {
 			width: 100%;
