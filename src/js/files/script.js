@@ -49,12 +49,6 @@ if (stopFarm) {
         phaseOne.classList.remove("_hide");
     })
 }
-if (sayCat) {
-    sayCat.addEventListener("click", function (e) {
-        catActive.classList.add("_active");
-        catIdle.classList.add("_hide");
-    })
-}
 if (burger) {
     burger.addEventListener("click", function(e) {
         burger.classList.toggle('is-active');
@@ -77,15 +71,21 @@ if (burgerLink) {
     })
 }
 if(sayCat) {
+    
     let limit = parseInt(document.getElementById("progressCount").innerHTML, 10);
     let currCoins = parseInt(document.getElementById("coinAmount").innerHTML, 10);
-    let filledBar = document.getElementById("filledBar");
+    let energyStatus = document.getElementById("filledBar");
+    let energyRemaining = energyStatus.value;
 
-    sayCat.addEventListener("click", (function () {
-    let energyProgress = filledBar.value;
+    sayCat.addEventListener("click", (function () {  
+
+    catActive.classList.add("_active");
+    catIdle.classList.add("_hide");
+
     document.getElementById("progressCount").innerHTML = --limit;
-    filledBar.value = --energyProgress;
+    energyStatus.value = --energyRemaining;
     document.getElementById("coinAmount").innerHTML = ++currCoins;
+
     soundPlay();
     })) 
-} 
+}
