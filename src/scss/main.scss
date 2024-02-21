@@ -20,9 +20,13 @@
         position: relative;
         display: flex;
         flex-direction: column;
-        .mainContent__catBox {
-            position: absolute;
-        }
+        @media (max-width: $desktop) {
+		}
+        @media (max-width: $mobile) {
+		}
+        // .mainContent__catBox {
+        //     position: absolute;
+        // }
     }
     &__phaseTwo {
         display: none;
@@ -30,11 +34,9 @@
         flex-direction: column;
         justify-content: flex-end;
         position: relative;
-        .mainContent__catBox {
-            position: relative;
-        }
-    }
-    &__sayBtn {
+        // .mainContent__catBox {
+        //     position: relative;
+        // }
     }
     &__title {
         margin: 9.375rem 0 0 0;
@@ -66,7 +68,6 @@
             svg {
                 margin-left: 0.625rem;
                 transition: .25s;
-                fill: black;
             }
         }
         button:hover {       
@@ -86,8 +87,11 @@
     }
     &__sayBtn {
 		display: flex;
-        margin-top: 2.8125rem;
+        align-self: center;
+        position: relative;
 		button {
+            position: absolute;
+            right: -115px;
 			border: 0.125rem solid #fff;
 			border-radius: 3.75rem;
 			overflow: hidden;
@@ -117,6 +121,7 @@
 		}
 	}
     &__catBox {
+        position: absolute;
         justify-content: center;
         top: 0;
         z-index: 5;
