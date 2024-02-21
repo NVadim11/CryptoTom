@@ -165,13 +165,22 @@
 			svg {
 				fill: #ffffff;
                 transition: .25s;
+                @media (max-width: $mobile) {
+                  }
 				defs {
 					image {
 						transition: .25s;
 						filter: invert(100%);
+                        @media (max-width: $mobile) {
+                            filter: invert(0);
+                        }
 					}					
 				}
 			}
+            @media (max-width: $mobile) {
+                background-color: transparent;
+                color: #ffffff;
+              }
 		}
 	}
     &__catBox {
@@ -329,15 +338,34 @@
         @media (max-width: $mobile) {
             right: 0;
             top: 0.9375rem;
+            padding: 0.625rem 0.625rem 0.5938rem 0.625rem;
            }
+           span {
+			@media (max-width: $mobile) {
+				display: none;
+			}
+		}
+		svg {
+			display: none;
+			@media (max-width: $mobile) {
+				display: flex;
+			}
+		}
     }
     &__backBtn:hover {
         cursor: pointer;
         border: 0.125rem solid #fff;
+        @media (max-width: $mobile) {
+            border-color: rgba(255, 255, 255, 0.5);
+        }
         button {
             color: #fff;
+            @media (max-width: $mobile) {
+                color: rgba(255, 255, 255, 0.5);
+            }
         }
     }
+    
 }
 
 
