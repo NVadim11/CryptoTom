@@ -13,7 +13,7 @@ const burgerLink = document.querySelector(".header__mobileMenu-links");
 
 // https://commondatastorage.googleapis.com/codeskulptor-assets/Collision8-Bit.ogg
 // meow.mp3
-let audio = new Audio('https://commondatastorage.googleapis.com/codeskulptor-assets/Collision8-Bit.ogg');
+let audio = new Audio('meow.mp3');
 function soundPlay() {    
     audio.play();
 }
@@ -104,10 +104,12 @@ function coinLogic() {
         catActive.classList.add("_active");
         catIdle.classList.add("_hide");
         catIdle.classList.remove("_active");
+    
+        console.log("clicked")
 
-    document.getElementById("progressCount").innerHTML = limit -= coinPerClick;
-    energyStatus.value = energyRemaining -= coinPerClick;
-    document.getElementById("coinAmount").innerHTML = currCoins += coinPerClick;
+        document.getElementById("progressCount").innerHTML = limit -= coinPerClick;
+        energyStatus.value = energyRemaining -= coinPerClick;
+        document.getElementById("coinAmount").innerHTML = currCoins += coinPerClick;
 
     soundPlay();
     })) 
