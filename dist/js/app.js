@@ -316,6 +316,7 @@
     if (startFarm) startFarm.addEventListener("click", (function(e) {
         phaseTwo.classList.add("_active");
         phaseOne.classList.add("_hide");
+        coinLogic();
     }));
     if (stopFarm) stopFarm.addEventListener("click", (function(e) {
         phaseTwo.classList.remove("_active");
@@ -340,33 +341,37 @@
         burger.classList.remove("is-active");
         mobileMenu.classList.remove("_active");
     }));
+    let currEnergy = parseFloat(document.getElementById("progressCount").innerHTML, 10);
+    let currCoins = parseFloat(document.getElementById("coinAmount").innerHTML, 10);
+    let energyStatus = document.getElementById("filledBar");
+    let energyRemaining = energyStatus.value;
+    let energyLimit = energyStatus.max;
+    let coinPerClick = 1;
+    let energyGain = 1;
+    let value = energyRemaining;
+    let max = energyLimit;
+    currEnergy = energyRemaining;
     function coinLogic() {
-        let limit = parseFloat(document.getElementById("progressCount").innerHTML, 10);
-        let currCoins = parseFloat(document.getElementById("coinAmount").innerHTML, 10);
-        let energyStatus = document.getElementById("filledBar");
-        let energyRemaining = energyStatus.value;
-        energyStatus.max;
-        let coinPerClick = 1;
-        let energyGain = 1;
-        function energyRegeneration() {
-            if (energyStatus.value < energyStatus.max) setInterval((() => {
-                energyStatus.value = energyStatus += energyGain;
-            }), 1e3);
+        if (value < max) {
+            let interval = setInterval((function() {
+                value++;
+                document.getElementById("progressCount").innerHTML = currEnergy += energyGain;
+                console.log(value);
+                if (value === max) clearInterval(interval);
+            }), 200);
         }
-        if (parseFloat(energyStatus.value) < parseFloat(energyStatus.max)) energyRegeneration();
         sayCat.addEventListener("click", (function() {
             catActive.classList.remove("_hide");
             catActive.classList.add("_active");
             catIdle.classList.add("_hide");
             catIdle.classList.remove("_active");
             console.log("clicked");
-            document.getElementById("progressCount").innerHTML = limit -= coinPerClick;
+            document.getElementById("progressCount").innerHTML = currEnergy -= coinPerClick;
             energyStatus.value = energyRemaining -= coinPerClick;
             document.getElementById("coinAmount").innerHTML = currCoins += coinPerClick;
             soundPlay();
         }));
     }
-    coinLogic();
     window["FLS"] = true;
     isWebp();
 })();

@@ -43,6 +43,7 @@ if (startFarm) {
     startFarm.addEventListener("click", function (e) {
         phaseTwo.classList.add("_active");
         phaseOne.classList.add("_hide");
+        coinLogic();
     })
 }
 if (stopFarm) {
@@ -76,28 +77,33 @@ if (burgerLink) {
         mobileMenu.classList.remove('_active');
     })
 }
+
+let currEnergy = parseFloat(document.getElementById("progressCount").innerHTML, 10);
+let currCoins = parseFloat(document.getElementById("coinAmount").innerHTML, 10);
+let energyStatus = document.getElementById("filledBar"); 
+
+let energyRemaining = energyStatus.value;
+let energyLimit = energyStatus.max;
+
+let coinPerClick = 1;
+let energyGain = 1;
+
+let value = energyRemaining;
+let max = energyLimit;
+
+currEnergy = energyRemaining;
+
 function coinLogic() {
-    let limit = parseFloat(document.getElementById("progressCount").innerHTML, 10);
-    let currCoins = parseFloat(document.getElementById("coinAmount").innerHTML, 10);
-    let energyStatus = document.getElementById("filledBar");    
-    let energyRemaining = energyStatus.value;
-
-    let energyLimit = energyStatus.max;
-
-    let coinPerClick = 1;
-    let energyGain = 1;
-
-    function energyRegeneration() {
-        if (energyStatus.value < energyStatus.max) {
-            setInterval(() => {
-                energyStatus.value = energyStatus += energyGain
-            }, 1000);
+    if (value < max) {
+    let interval = setInterval(function() {
+        value++;
+        document.getElementById("progressCount").innerHTML = currEnergy += energyGain;
+        console.log(value); // Prints the updated value
+        if (value === max) {
+            clearInterval(interval);
         }
-    }    
-
-    if (parseFloat(energyStatus.value) < parseFloat(energyStatus.max)) {
-        energyRegeneration();
-    }  
+    }, 200); // Interval runs every 1000 milliseconds (1 second)
+    }
 
     sayCat.addEventListener("click", (function () {  
         catActive.classList.remove("_hide");
@@ -107,11 +113,10 @@ function coinLogic() {
     
         console.log("clicked")
 
-        document.getElementById("progressCount").innerHTML = limit -= coinPerClick;
+        document.getElementById("progressCount").innerHTML = currEnergy -= coinPerClick;
         energyStatus.value = energyRemaining -= coinPerClick;
         document.getElementById("coinAmount").innerHTML = currCoins += coinPerClick;
 
     soundPlay();
     })) 
 }
-coinLogic();
