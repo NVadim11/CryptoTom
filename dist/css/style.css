@@ -957,6 +957,7 @@ body::after {
       -ms-grid-row-align: center;
       align-self: center;
   position: relative;
+  z-index: 200;
 }
 
 .mainContent__sayBtn button {
@@ -1192,6 +1193,146 @@ body::after {
 
 .mainContent__backBtn:hover button {
   color: #fff;
+}
+
+.mainContent__animation {
+  position: absolute;
+  width: 40rem;
+  height: 40rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.mainContent__coinOne {
+  position: absolute;
+  -webkit-animation: 1.6s linear 0s infinite coinOne;
+          animation: 1.6s linear 0s infinite coinOne;
+  width: 7.8125rem;
+  height: 9rem;
+}
+
+.mainContent__coinOne img {
+  max-width: 100%;
+}
+
+.mainContent__coinTwo {
+  position: absolute;
+  right: 5rem;
+  -webkit-animation: 3s linear 0s infinite coinTwo;
+          animation: 3s linear 0s infinite coinTwo;
+  width: 5.3125rem;
+  height: 6.5rem;
+  margin-top: 10rem;
+}
+
+.mainContent__coinTwo img {
+  max-width: 100%;
+}
+
+.mainContent__coinThree {
+  position: absolute;
+  -webkit-animation: 4s linear 0s infinite coinThree;
+          animation: 4s linear 0s infinite coinThree;
+  width: 45px;
+  height: 64px;
+  left: 30%;
+  margin-top: 15rem;
+}
+
+.mainContent__coinThree img {
+  max-width: 100%;
+}
+
+@-webkit-keyframes coinOne {
+  from {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 1;
+  }
+
+  to {
+    -webkit-transform: translateY(40rem);
+            transform: translateY(40rem);
+    opacity: 0;
+  }
+}
+
+@keyframes coinOne {
+  from {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 1;
+  }
+
+  to {
+    -webkit-transform: translateY(40rem);
+            transform: translateY(40rem);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes coinTwo {
+  from {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 0.8;
+  }
+
+  to {
+    -webkit-transform: translateY(30rem);
+            transform: translateY(30rem);
+    opacity: 0;
+    rotate: 3deg;
+  }
+}
+
+@keyframes coinTwo {
+  from {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 0.8;
+  }
+
+  to {
+    -webkit-transform: translateY(30rem);
+            transform: translateY(30rem);
+    opacity: 0;
+    rotate: 3deg;
+  }
+}
+
+@-webkit-keyframes coinThree {
+  from {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 0.5;
+  }
+
+  to {
+    -webkit-transform: translateY(20rem);
+            transform: translateY(20rem);
+    opacity: 0;
+    rotate: -11deg;
+  }
+}
+
+@keyframes coinThree {
+  from {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 0.5;
+  }
+
+  to {
+    -webkit-transform: translateY(20rem);
+            transform: translateY(20rem);
+    opacity: 0;
+    rotate: -11deg;
+  }
 }
 
 @media (max-width: 119.99875em) {
