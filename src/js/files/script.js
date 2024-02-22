@@ -42,7 +42,7 @@ if (soundOff) {
 if (startFarm) {
     startFarm.addEventListener("click", function (e) {
         phaseTwo.classList.add("_active");
-        phaseOne.classList.add("_hide");
+        phaseOne.classList.add("_hide");        
         coinLogic();
     })
 }
@@ -78,45 +78,44 @@ if (burgerLink) {
     })
 }
 
-let currEnergy = parseFloat(document.getElementById("progressCount").innerHTML, 10);
-let currCoins = parseFloat(document.getElementById("coinAmount").innerHTML, 10);
-let energyStatus = document.getElementById("filledBar"); 
-
-let energyRemaining = energyStatus.value;
-let energyLimit = energyStatus.max;
+let maximumEnergy = parseInt(document.getElementById("maximumEnergy").innerHTML)
+let currEnergy = parseInt(document.getElementById("energyCount").innerHTML);
+let currCoins = parseInt(document.getElementById("coinAmount").innerHTML);
+let energyBar = document.getElementById("filledBar");
+let energyLimit = parseInt(document.getElementById("filledBar").max); 
+let energyStatus = parseInt(document.getElementById("filledBar").value); 
 
 let coinPerClick = 1;
 let energyGain = 1;
 
-let value = energyRemaining;
-let max = energyLimit;
+energyStatus = currEnergy;
+currEnergy = energyStatus;
 
-currEnergy = energyRemaining;
+let enValue = energyStatus;
+let enMax = energyLimit;
 
 function coinLogic() {
-    if (value < max) {
-    let interval = setInterval(function() {
-        value++;
-        document.getElementById("progressCount").innerHTML = currEnergy += energyGain;
-        console.log(value); // Prints the updated value
-        if (value === max) {
-            clearInterval(interval);
-        }
-    }, 200); // Interval runs every 1000 milliseconds (1 second)
-    }
-
     sayCat.addEventListener("click", (function () {  
         catActive.classList.remove("_hide");
         catActive.classList.add("_active");
         catIdle.classList.add("_hide");
         catIdle.classList.remove("_active");
-    
-        console.log("clicked")
-
-        document.getElementById("progressCount").innerHTML = currEnergy -= coinPerClick;
-        energyStatus.value = energyRemaining -= coinPerClick;
+        document.getElementById("energyCount").innerHTML = currEnergy -= coinPerClick;
+        document.getElementById("filledBar").value = enValue -= coinPerClick;
         document.getElementById("coinAmount").innerHTML = currCoins += coinPerClick;
-
-    soundPlay();
+        energyUpdate()
+        soundPlay();
     })) 
+}
+// Energy regeneration
+function energyUpdate() {   
+    const energyRegenerationInterval = setTimeout(function() {
+        if (enValue < enMax) {
+            document.getElementById("filledBar").value = enValue += energyGain;
+            document.getElementById("energyCount").innerHTML = currEnergy += energyGain;
+            console.log(enValue);
+        } else if (enValue >= enMax) {
+            clearInterval(energyRegenerationInterval);
+        }
+    }, 1000);   
 }
