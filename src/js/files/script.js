@@ -103,19 +103,20 @@ function coinLogic() {
         document.getElementById("energyCount").innerHTML = currEnergy -= coinPerClick;
         document.getElementById("filledBar").value = enValue -= coinPerClick;
         document.getElementById("coinAmount").innerHTML = currCoins += coinPerClick;
-        energyUpdate()
+        // energyUpdate()
         soundPlay();
     })) 
 }
 // Energy regeneration
-function energyUpdate() {   
-    const energyRegenerationInterval = setTimeout(function() {
-        if (enValue < enMax) {
-            document.getElementById("filledBar").value = enValue += energyGain;
-            document.getElementById("energyCount").innerHTML = currEnergy += energyGain;
-            console.log(enValue);
-        } else if (enValue >= enMax) {
-            clearInterval(energyRegenerationInterval);
-        }
-    }, 1000);   
-}
+// function energyUpdate() {   
+//     const energyRegenerationInterval = setInterval(function() {
+//         if (enValue < enMax) {
+//             document.getElementById("filledBar").value = enValue += energyGain;
+//             document.getElementById("energyCount").innerHTML = currEnergy += energyGain;
+//             console.log(enValue);
+//         } else if (enValue >= enMax) {
+//             clearInterval(energyRegenerationInterval);
+//             console.log('interval demounted');
+//         }
+//     }, 1000);   
+// }   
