@@ -292,7 +292,7 @@
     const burger = document.querySelector(".header__mobileBurger-btn");
     const mobileMenu = document.querySelector(".header__mobileMenu");
     const burgerLink = document.querySelector(".header__mobileMenu-links");
-    let audio = new Audio("meow.mp3");
+    let audio = new Audio("https://commondatastorage.googleapis.com/codeskulptor-assets/Collision8-Bit.ogg");
     function soundPlay() {
         audio.play();
     }
@@ -320,6 +320,10 @@
     if (stopFarm) stopFarm.addEventListener("click", (function(e) {
         phaseTwo.classList.remove("_active");
         phaseOne.classList.remove("_hide");
+        catActive.classList.remove("_active");
+        catIdle.classList.remove("_hide");
+        catActive.classList.add("_hide");
+        catIdle.classList.add("_active");
     }));
     if (burger) burger.addEventListener("click", (function(e) {
         burger.classList.toggle("is-active");
@@ -336,20 +340,32 @@
         burger.classList.remove("is-active");
         mobileMenu.classList.remove("_active");
     }));
-    if (sayCat) {
-        let limit = parseInt(document.getElementById("progressCount").innerHTML, 10);
-        let currCoins = parseInt(document.getElementById("coinAmount").innerHTML, 10);
+    function coinLogic() {
+        let limit = parseFloat(document.getElementById("progressCount").innerHTML, 10);
+        let currCoins = parseFloat(document.getElementById("coinAmount").innerHTML, 10);
         let energyStatus = document.getElementById("filledBar");
         let energyRemaining = energyStatus.value;
+        energyStatus.max;
+        let coinPerClick = 1;
+        let energyGain = 1;
+        function energyRegeneration() {
+            if (energyStatus.value < energyStatus.max) setInterval((() => {
+                energyStatus.value = energyStatus += energyGain;
+            }), 1e3);
+        }
+        if (parseFloat(energyStatus.value) < parseFloat(energyStatus.max)) energyRegeneration();
         sayCat.addEventListener("click", (function() {
+            catActive.classList.remove("_hide");
             catActive.classList.add("_active");
             catIdle.classList.add("_hide");
-            document.getElementById("progressCount").innerHTML = --limit;
-            energyStatus.value = --energyRemaining;
-            document.getElementById("coinAmount").innerHTML = ++currCoins;
+            catIdle.classList.remove("_active");
+            document.getElementById("progressCount").innerHTML = limit -= coinPerClick;
+            energyStatus.value = energyRemaining -= coinPerClick;
+            document.getElementById("coinAmount").innerHTML = currCoins += coinPerClick;
             soundPlay();
         }));
     }
+    coinLogic();
     window["FLS"] = true;
     isWebp();
 })();
