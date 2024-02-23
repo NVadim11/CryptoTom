@@ -330,7 +330,7 @@ body::after {
 
 .popup_show,
 .popupLeaderboard_show {
-  z-index: 150;
+  z-index: 300;
   visibility: visible;
   overflow: auto;
   pointer-events: auto;
