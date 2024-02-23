@@ -1220,10 +1220,13 @@ body::after {
 
 .mainContent__coinOne {
   position: absolute;
-  -webkit-animation: 1.6s linear 0s infinite coinOne;
-          animation: 1.6s linear 0s infinite coinOne;
-  width: 7.8125rem;
-  height: 9rem;
+  -webkit-animation: 1.8s linear 0s infinite coinOne;
+          animation: 1.8s linear 0s infinite coinOne;
+  width: 5.8125rem;
+  height: 7rem;
+  left: 1.25rem;
+  margin-top: 10rem;
+  display: none;
 }
 
 .mainContent__coinOne img {
@@ -1238,6 +1241,7 @@ body::after {
   width: 5.3125rem;
   height: 6.5rem;
   margin-top: 10rem;
+  display: none;
 }
 
 .mainContent__coinTwo img {
@@ -1252,9 +1256,69 @@ body::after {
   height: 64px;
   left: 30%;
   margin-top: 15rem;
+  display: none;
 }
 
 .mainContent__coinThree img {
+  max-width: 100%;
+}
+
+.mainContent__coinFour {
+  position: absolute;
+  -webkit-animation: 4s linear 0s infinite coinFour;
+          animation: 4s linear 0s infinite coinFour;
+  width: 45px;
+  height: 64px;
+  left: 30%;
+  margin-top: 15rem;
+  display: none;
+}
+
+.mainContent__coinFour img {
+  max-width: 100%;
+}
+
+.mainContent__coinFive {
+  position: absolute;
+  -webkit-animation: 4s linear 0s infinite coinFive;
+          animation: 4s linear 0s infinite coinFive;
+  width: 45px;
+  height: 64px;
+  left: 30%;
+  margin-top: 15rem;
+  display: none;
+}
+
+.mainContent__coinFive img {
+  max-width: 100%;
+}
+
+.mainContent__coinSix {
+  position: absolute;
+  -webkit-animation: 4s linear 0s infinite coinSix;
+          animation: 4s linear 0s infinite coinSix;
+  width: 45px;
+  height: 64px;
+  left: 30%;
+  margin-top: 15rem;
+  display: none;
+}
+
+.mainContent__coinSix img {
+  max-width: 100%;
+}
+
+.mainContent__coinSeven {
+  position: absolute;
+  -webkit-animation: 1.8s linear 0s infinite coinSeven;
+          animation: 1.8s linear 0s infinite coinSeven;
+  width: 5.8125rem;
+  height: 7rem;
+  right: 0;
+  display: none;
+}
+
+.mainContent__coinSeven img {
   max-width: 100%;
 }
 
@@ -1343,6 +1407,124 @@ body::after {
             transform: translateY(20rem);
     opacity: 0;
     rotate: -11deg;
+  }
+}
+
+@-webkit-keyframes coinFour {
+  from {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 0.5;
+  }
+
+  to {
+    -webkit-transform: translateY(20rem);
+            transform: translateY(20rem);
+    opacity: 0;
+    rotate: -11deg;
+  }
+}
+
+@keyframes coinFour {
+  from {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 0.5;
+  }
+
+  to {
+    -webkit-transform: translateY(20rem);
+            transform: translateY(20rem);
+    opacity: 0;
+    rotate: -11deg;
+  }
+}
+
+@-webkit-keyframes coinFive {
+  from {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 0.5;
+  }
+
+  to {
+    -webkit-transform: translateY(20rem);
+            transform: translateY(20rem);
+    opacity: 0;
+    rotate: -11deg;
+  }
+}
+
+@keyframes coinFive {
+  from {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 0.5;
+  }
+
+  to {
+    -webkit-transform: translateY(20rem);
+            transform: translateY(20rem);
+    opacity: 0;
+    rotate: -11deg;
+  }
+}
+
+@-webkit-keyframes coinSix {
+  from {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 0.5;
+  }
+
+  to {
+    -webkit-transform: translateY(20rem);
+            transform: translateY(20rem);
+    opacity: 0;
+    rotate: -11deg;
+  }
+}
+
+@keyframes coinSix {
+  from {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 0.5;
+  }
+
+  to {
+    -webkit-transform: translateY(20rem);
+            transform: translateY(20rem);
+    opacity: 0;
+    rotate: -11deg;
+  }
+}
+
+@-webkit-keyframes coinSeven {
+  from {
+    -webkit-transform: translateY(5rem);
+            transform: translateY(5rem);
+    opacity: 1;
+  }
+
+  to {
+    -webkit-transform: translateY(35rem);
+            transform: translateY(35rem);
+    opacity: 0;
+  }
+}
+
+@keyframes coinSeven {
+  from {
+    -webkit-transform: translateY(5rem);
+            transform: translateY(5rem);
+    opacity: 1;
+  }
+
+  to {
+    -webkit-transform: translateY(35rem);
+            transform: translateY(35rem);
+    opacity: 0;
   }
 }
 

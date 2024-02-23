@@ -378,9 +378,12 @@
     }
     &__coinOne {
         position: absolute;
-        animation: 1.6s linear 0s infinite coinOne;
-        width: 7.8125rem;
-        height: 9rem;   
+        animation: 1.8s linear 0s infinite coinOne;
+        width: 5.8125rem;
+        height: 7rem;   
+        left: 1.25rem;
+        margin-top: 10rem;
+        display: none;
         img {
             max-width: 100%;
         }
@@ -392,6 +395,7 @@
         width: 5.3125rem;
         height: 6.5rem;  
         margin-top: 10rem;
+        display: none;
         img {
             max-width: 100%;
         } 
@@ -403,6 +407,54 @@
         height: 64px; 
         left: 30%; 
         margin-top: 15rem;
+        display: none;
+        img {
+            max-width: 100%;
+        } 
+    }
+    &__coinFour {
+        position: absolute;
+        animation: 4s linear 0s infinite coinFour;
+        width: 45px;
+        height: 64px; 
+        left: 30%; 
+        margin-top: 15rem;
+        display: none;
+        img {
+            max-width: 100%;
+        } 
+    }
+    &__coinFive {
+        position: absolute;
+        animation: 4s linear 0s infinite coinFive;
+        width: 45px;
+        height: 64px; 
+        left: 30%; 
+        margin-top: 15rem;
+        display: none;
+        img {
+            max-width: 100%;
+        } 
+    }
+    &__coinSix {
+        position: absolute;
+        animation: 4s linear 0s infinite coinSix;
+        width: 45px;
+        height: 64px; 
+        left: 30%; 
+        margin-top: 15rem;
+        display: none;
+        img {
+            max-width: 100%;
+        } 
+    }
+    &__coinSeven {
+        position: absolute;
+        animation: 1.8s linear 0s infinite coinSeven;
+        width: 5.8125rem;
+        height: 7rem;   
+        right: 0;
+        display: none;
         img {
             max-width: 100%;
         } 
@@ -410,87 +462,6 @@
 }
 
 @keyframes coinOne {
-    // 0% {
-    //     transform: translateY(0px);
-    //   }
-    // 1% {
-
-    // }
-    // 2% {
-
-    // }
-    // 3% {
-
-    // }
-    // 4% {
-
-    // }
-    // 5% {
-
-    // }
-    // 6% {
-
-    // }
-    // 7% {
-
-    // }
-    // 8% {
-
-    // }
-    // 9% {
-
-    // }
-    // 10% {
-
-    // }
-    // 11% {
-
-    // }
-    // 12% {
-
-    // }
-    // 13% {
-
-    // }
-    // 14% {
-
-    // }
-    // 15%{
-
-    // }
-    // 16%{
-
-    // }
-    // 17% {
-
-    // }
-    // 18% {
-
-    // }
-    // 19% {
-
-    // }
-    // 20% {
-
-    // }
-    // 21% {
-
-    // }
-    // 22% {
-
-    // }
-    //   25% {
-    //     transform: translateY(40px);
-    //   }
-    //   50% {
-    //     transform: translateY(80px);
-    //   }
-    //   75% {
-    //     transform: translateY(120px);
-    //   }
-    //   100% {
-    //     transform: translateY(160px);
-    //   }
     from {
         transform: translateY(0px);
         opacity: 1;
@@ -502,87 +473,6 @@
 }
 
 @keyframes coinTwo {
-    // 0% {
-    //     transform: translateY(0px);
-    //   }
-    // 1% {
-
-    // }
-    // 2% {
-
-    // }
-    // 3% {
-
-    // }
-    // 4% {
-
-    // }
-    // 5% {
-
-    // }
-    // 6% {
-
-    // }
-    // 7% {
-
-    // }
-    // 8% {
-
-    // }
-    // 9% {
-
-    // }
-    // 10% {
-
-    // }
-    // 11% {
-
-    // }
-    // 12% {
-
-    // }
-    // 13% {
-
-    // }
-    // 14% {
-
-    // }
-    // 15%{
-
-    // }
-    // 16%{
-
-    // }
-    // 17% {
-
-    // }
-    // 18% {
-
-    // }
-    // 19% {
-
-    // }
-    // 20% {
-
-    // }
-    // 21% {
-
-    // }
-    // 22% {
-
-    // }
-    //   25% {
-    //     transform: translateY(40px);
-    //   }
-    //   50% {
-    //     transform: translateY(80px);
-    //   }
-    //   75% {
-    //     transform: translateY(120px);
-    //   }
-    //   100% {
-    //     transform: translateY(160px);
-    //   }
     from {
         transform: translateY(0px);
         opacity: 0.8;
@@ -594,19 +484,6 @@
     }
 }
 @keyframes coinThree {
-
-    //   25% {
-    //     transform: translateY(40px);
-    //   }
-    //   50% {
-    //     transform: translateY(80px);
-    //   }
-    //   75% {
-    //     transform: translateY(120px);
-    //   }
-    //   100% {
-    //     transform: translateY(160px);
-    //   }
     from {
         transform: translateY(0px);
         opacity: 0.5;
@@ -617,5 +494,47 @@
         rotate: -11deg;
     }
 }
-
+@keyframes coinFour {
+    from {
+        transform: translateY(0px);
+        opacity: 0.5;
+    }
+    to {
+        transform: translateY(20rem);
+        opacity: 0;
+        rotate: -11deg;
+    }
+}
+@keyframes coinFive {
+    from {
+        transform: translateY(0px);
+        opacity: 0.5;
+    }
+    to {
+        transform: translateY(20rem);
+        opacity: 0;
+        rotate: -11deg;
+    }
+}
+@keyframes coinSix {
+    from {
+        transform: translateY(0px);
+        opacity: 0.5;
+    }
+    to {
+        transform: translateY(20rem);
+        opacity: 0;
+        rotate: -11deg;
+    }
+}
+@keyframes coinSeven {
+    from {
+        transform: translateY(5rem);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(35rem);
+        opacity: 0;
+    }
+}
 
