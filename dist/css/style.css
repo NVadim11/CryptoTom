@@ -1026,6 +1026,14 @@ body::after {
   width: 13.125rem;
 }
 
+.mainContent__catBox object {
+  width: 13.125rem;
+}
+
+.mainContent__catBox svg {
+  width: 13.125rem;
+}
+
 .mainContent__catIdle {
   z-index: 15;
 }
@@ -1813,6 +1821,14 @@ body::after {
   }
 
   .mainContent__catBox img {
+    width: 9.6875rem;
+  }
+
+  .mainContent__catBox object {
+    width: 9.6875rem;
+  }
+
+  .mainContent__catBox svg {
     width: 9.6875rem;
   }
 

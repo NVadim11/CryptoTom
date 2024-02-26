@@ -200,7 +200,18 @@
                 width: 9.6875rem;
             }
         }
-
+        object {
+            width: 13.125rem;
+            @media (max-width: $mobile) {
+                width: 9.6875rem;
+            }
+        }
+        svg {
+            width: 13.125rem;
+            @media (max-width: $mobile) {
+                width: 9.6875rem;
+            }
+        }
     }
     &__catIdle {
         z-index: 15;

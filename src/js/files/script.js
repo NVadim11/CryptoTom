@@ -120,3 +120,21 @@ function coinLogic() {
 //         }
 //     }, 1000);   
 // }   
+
+let hour = 12;
+
+let minute = 30;
+
+
+
+if (hour === 12 || minute === 12) {
+
+ 	console.log( 'Час: 12:30' );
+
+}
+
+if (hour === 12 || minute === 12) {
+
+    console.log( 'Час: 12:30' );
+
+}
