@@ -131,6 +131,12 @@ body::after {
 		width: 100%;
 		gap: 0.625rem;
 	}
+	.firstPlace {
+		color: #fff500;		
+	}
+	.firstPlaceBorder {
+		border: 0.125rem solid #fff500;
+	}
 	&__tableItem {
 		border: 0.125rem solid #fff;
 		display: flex;

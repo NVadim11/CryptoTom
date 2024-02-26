@@ -446,6 +446,14 @@ body::after {
   gap: 0.625rem;
 }
 
+.popupLeaderboard .firstPlace {
+  color: #fff500;
+}
+
+.popupLeaderboard .firstPlaceBorder {
+  border: 0.125rem solid #fff500;
+}
+
 .popupLeaderboard__tableItem {
   border: 0.125rem solid #fff;
   display: -webkit-box;

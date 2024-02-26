@@ -1,12 +1,11 @@
-import * as web3 from "@solana/web3.js";
-import { Keypair, Connection } from '@solana/web3.js';
-// import * as bs58 from "bs58";
+// import { Connection, Keypair } from '@solana/web3.js'
+// // import * as bs58 from "bs58";
 
-const wallet = Keypair.generate();
-console.log(wallet);
-// console.log("public key:" ${wallet.publicKey.toBase58()});
-const connection = new Connection(clusterApiUrl('devnet'), 'confirmed');
-console.log(connection);
+// const wallet = Keypair.generate();
+// console.log(wallet);
+// // console.log("public key:" ${wallet.publicKey.toBase58()});
+// const connection = new Connection(clusterApiUrl('devnet'), 'confirmed');
+// console.log(connection);
 
 
 const soundOn = document.querySelector(".soundToggler__itemOn");
@@ -24,7 +23,7 @@ const burgerLink = document.querySelector(".header__mobileMenu-links");
 
 // https://commondatastorage.googleapis.com/codeskulptor-assets/Collision8-Bit.ogg
 // meow.mp3
-let audio = new Audio('meow.mp3');
+let audio = new Audio('https://commondatastorage.googleapis.com/codeskulptor-assets/Collision8-Bit.ogg');
 function soundPlay() {    
     audio.play();
 }
@@ -53,8 +52,7 @@ if (soundOff) {
 if (startFarm) {
     startFarm.addEventListener("click", function (e) {
         phaseTwo.classList.add("_active");
-        phaseOne.classList.add("_hide");        
-        coinLogic();
+        phaseOne.classList.add("_hide");    
     })
 }
 if (stopFarm) {
@@ -118,6 +116,7 @@ function coinLogic() {
         soundPlay();
     })) 
 }
+coinLogic()
 // Energy regeneration
 // function energyUpdate() {   
 //     const energyRegenerationInterval = setInterval(function() {
@@ -133,3 +132,4 @@ function coinLogic() {
 // }   
 
 
+// }  
