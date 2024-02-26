@@ -1,3 +1,10 @@
+// import * as web3 from "@solana/web3.js";
+// import * as bs58 from "bs58";
+
+// const wallet = Keypair.generate();
+
+
+
 const soundOn = document.querySelector(".soundToggler__itemOn");
 const soundOff = document.querySelector(".soundToggler__itemOff");
 const phaseOne = document.querySelector(".mainContent__phaseOne");
@@ -121,20 +128,4 @@ function coinLogic() {
 //     }, 1000);   
 // }   
 
-let hour = 12;
 
-let minute = 30;
-
-
-
-if (hour === 12 || minute === 12) {
-
- 	console.log( 'Час: 12:30' );
-
-}
-
-if (hour === 12 || minute === 12) {
-
-    console.log( 'Час: 12:30' );
-
-}
