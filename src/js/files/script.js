@@ -1,8 +1,12 @@
-// import * as web3 from "@solana/web3.js";
+import * as web3 from "@solana/web3.js";
+import { Keypair, Connection } from '@solana/web3.js';
 // import * as bs58 from "bs58";
 
-// const wallet = Keypair.generate();
-
+const wallet = Keypair.generate();
+console.log(wallet);
+// console.log("public key:" ${wallet.publicKey.toBase58()});
+const connection = new Connection(clusterApiUrl('devnet'), 'confirmed');
+console.log(connection);
 
 
 const soundOn = document.querySelector(".soundToggler__itemOn");
